@@ -8,12 +8,14 @@ from llm_cost_router.classifier.heuristic import HeuristicClassifier
 from llm_cost_router.providers import init_providers
 from llm_cost_router.router.config import load_routing_config
 from llm_cost_router.router.router import Router
+from llm_cost_router.storage.db import init_db
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     routing_config = load_routing_config(settings.ROUTING_CONFIG_PATH)
     init_providers()
+    init_db()
     app.state.classifier = HeuristicClassifier()
     app.state.router = Router(routing_config)
     yield
