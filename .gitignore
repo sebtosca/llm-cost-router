@@ -5,3 +5,4 @@ __pycache__/
 *.egg-info/
 data/results/*.json
 .pytest_cache/
+docs/ROADMAP.md
