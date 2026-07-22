@@ -11,3 +11,4 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 ROUTING_CONFIG_PATH = PROJECT_ROOT / "config" / "routing.yaml"
+DB_PATH = PROJECT_ROOT / "data" / "router.db"
