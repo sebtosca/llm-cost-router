@@ -162,3 +162,63 @@ def test_get_stats_empty_db() -> None:
     body = resp.json()
     assert body["total_requests"] == 0
     assert body["total_cost_usd"] == 0.0
+
+
+def test_put_routing_config_changes_next_request_routing() -> None:
+    app = create_app()
+    new_routing = {
+        "routing": {"tier_1": "claude-haiku-4-5", "tier_2": "gemini-3-flash", "tier_3": "claude-sonnet-5"}
+    }
+    with patch(
+        "llm_cost_router.api.routes.send_request",
+        return_value=_fake_response(model_id="claude-haiku-4-5", provider="anthropic"),
+    ):
+        with patch(
+            "llm_cost_router.verification.verifier.send_request",
+            return_value=_fake_response(text="5"),
+        ):
+            with TestClient(app) as client:
+                put_resp = client.put("/v1/routing-config", json=new_routing)
+                assert put_resp.status_code == 200
+
+                post_resp = client.post(
+                    "/v1/completions", json={"prompt": "What is the capital of France?"}
+                )
+
+    assert post_resp.status_code == 200
+    assert post_resp.json()["model_used"] == "claude-haiku-4-5"
+
+
+def test_put_routing_config_unknown_model_id_rejected_and_keeps_old_config() -> None:
+    app = create_app()
+    bad_routing = {
+        "routing": {"tier_1": "not-a-real-model", "tier_2": "gemini-3-flash", "tier_3": "claude-sonnet-5"}
+    }
+    with patch(
+        "llm_cost_router.api.routes.send_request",
+        return_value=_fake_response(model_id="gpt-4o-mini", provider="openai"),
+    ):
+        with patch(
+            "llm_cost_router.verification.verifier.send_request",
+            return_value=_fake_response(text="5"),
+        ):
+            with TestClient(app) as client:
+                put_resp = client.put("/v1/routing-config", json=bad_routing)
+                assert put_resp.status_code == 422
+
+                # old config (tier_1 -> gpt-4o-mini) is still in effect
+                post_resp = client.post(
+                    "/v1/completions", json={"prompt": "What is the capital of France?"}
+                )
+
+    assert post_resp.status_code == 200
+    assert post_resp.json()["model_used"] == "gpt-4o-mini"
+
+
+def test_put_routing_config_missing_tier_key_rejected() -> None:
+    app = create_app()
+    incomplete_routing = {"routing": {"tier_1": "gpt-4o-mini", "tier_2": "gemini-3-flash"}}
+    with TestClient(app) as client:
+        resp = client.put("/v1/routing-config", json=incomplete_routing)
+
+    assert resp.status_code == 422
