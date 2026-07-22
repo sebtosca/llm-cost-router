@@ -6,4 +6,5 @@ __pycache__/
 data/results/*.json
 .pytest_cache/
 data/router.db
+data/classifier_model.joblib
 docs/ROADMAP.md

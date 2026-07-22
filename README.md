@@ -1,16 +1,16 @@
 # llm-cost-router
 
 Routes LLM completion requests to the cheapest model capable of handling them.
-A heuristic classifier scores each prompt into a complexity tier (1=simple,
-2=moderate, 3=complex), and a YAML-configured router maps each tier to a
-model across OpenAI, Anthropic, and Gemini.
+A classifier scores each prompt into a complexity tier (1=simple, 2=moderate,
+3=complex), and a YAML-configured router maps each tier to a model across
+OpenAI, Anthropic, and Gemini.
 
 ## Setup
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -e ".[dev,dashboard]"
+pip install -e ".[dev,dashboard,ml]"
 cp .env.example .env   # then fill in OPENAI_API_KEY / ANTHROPIC_API_KEY / GEMINI_API_KEY
 ```
 
@@ -68,7 +68,24 @@ per model. Makes real, paid API calls.
 python scripts/baseline_test.py
 ```
 
+## Classifier: heuristic vs. sklearn
+
+The default classifier is a hand-coded heuristic (`classifier/heuristic.py`).
+A scikit-learn LogisticRegression classifier is also available, trained on a
+200+ example labeled dataset (`data/labeled_prompts.json`, tracked in git) built
+from tier-targeted templates rather than manually typed one-by-one - see the
+docstring in `scripts/generate_labeled_dataset.py` for why. To use it:
+
+```bash
+python scripts/generate_labeled_dataset.py   # regenerate the labeled dataset (optional, already tracked)
+python scripts/train_classifier.py           # trains + prints accuracy/confusion matrix, saves data/classifier_model.joblib
+CLASSIFIER=sklearn uvicorn llm_cost_router.api.app:app --app-dir src --port 8000
+```
+
+The trained model file is gitignored (a regenerable build artifact) - run
+`train_classifier.py` once after cloning before setting `CLASSIFIER=sklearn`.
+
 ## Not yet built
 
-Scikit-learn classifier + labeled dataset, classifier feedback loop,
+Classifier feedback loop (retraining from verification failures),
 `PUT /v1/routing-config`, docker/docker-compose, load testing.

@@ -82,3 +82,28 @@ def requested_output_complexity(prompt: str) -> int:
     if any(kw in lower for kw in ("list", "bullet point", "bullet points")):
         return 1
     return 0
+
+
+FEATURE_NAMES = (
+    "word_count",
+    "complex_keyword_count",
+    "moderate_keyword_count",
+    "instruction_count",
+    "has_context_block",
+    "output_complexity",
+)
+
+
+def feature_vector(prompt: str) -> list[float]:
+    """Single source of truth for the numeric feature vector used both by the
+    training script and the sklearn classifier at inference time - order must
+    match FEATURE_NAMES."""
+    complex_hits, moderate_hits = keyword_hits(prompt)
+    return [
+        float(word_count(prompt)),
+        float(len(complex_hits)),
+        float(len(moderate_hits)),
+        float(instruction_count(prompt)),
+        1.0 if has_context_block(prompt) else 0.0,
+        float(requested_output_complexity(prompt)),
+    ]
