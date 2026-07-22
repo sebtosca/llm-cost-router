@@ -19,9 +19,9 @@ def log_request(
     cost_usd: float | None = None,
     latency_ms: float | None = None,
     error: str | None = None,
-) -> None:
+) -> int:
     with get_connection() as conn:
-        conn.execute(
+        cursor = conn.execute(
             """
             INSERT INTO request_log
                 (timestamp, prompt_hash, tier, model_id, provider,
@@ -40,4 +40,22 @@ def log_request(
                 latency_ms,
                 error,
             ),
+        )
+        return cursor.lastrowid
+
+
+def update_quality_score(request_id: int, quality_score: float) -> None:
+    with get_connection() as conn:
+        conn.execute(
+            "UPDATE request_log SET quality_score = ? WHERE id = ?",
+            (quality_score, request_id),
+        )
+
+
+def mark_escalated(request_id: int, escalated_model_id: str, cost_delta: float) -> None:
+    with get_connection() as conn:
+        conn.execute(
+            "UPDATE request_log SET escalated = 1, escalated_model_id = ?, "
+            "cost_delta = ? WHERE id = ?",
+            (escalated_model_id, cost_delta, request_id),
         )
