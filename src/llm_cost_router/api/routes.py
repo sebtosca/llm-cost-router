@@ -1,9 +1,16 @@
 from fastapi import APIRouter, HTTPException, Request
 
-from llm_cost_router.api.schemas import CompletionRequest, CompletionResponse
+from llm_cost_router.api.schemas import (
+    CompletionRequest,
+    CompletionResponse,
+    ModelInfo,
+    ModelsResponse,
+)
+from llm_cost_router.models.registry import list_models
 from llm_cost_router.models.types import ProviderRequestError
 from llm_cost_router.providers import send_request
 from llm_cost_router.storage.request_log import log_request
+from llm_cost_router.storage.stats import Stats, compute_stats
 
 router = APIRouter()
 
@@ -49,3 +56,24 @@ def create_completion(body: CompletionRequest, request: Request) -> CompletionRe
         cost_usd=response.cost_usd,
         latency_ms=response.latency_ms,
     )
+
+
+@router.get("/v1/models", response_model=ModelsResponse)
+def get_models() -> ModelsResponse:
+    return ModelsResponse(
+        models=[
+            ModelInfo(
+                id=m.id,
+                provider=m.provider,
+                cost_per_input_token=m.cost_per_input_token,
+                cost_per_output_token=m.cost_per_output_token,
+                quality_tier=m.quality_tier.value,
+            )
+            for m in list_models()
+        ]
+    )
+
+
+@router.get("/v1/stats", response_model=Stats)
+def get_stats() -> Stats:
+    return compute_stats()
