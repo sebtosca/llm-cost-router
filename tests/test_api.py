@@ -64,6 +64,31 @@ def test_completions_triggers_background_verification() -> None:
     assert row[0] == 5.0
 
 
+def test_completions_adversarial_prompt_shows_up_escalated() -> None:
+    app = create_app()
+    reference_text = "The actual nuanced multi-step reasoning answer."
+    with patch(
+        "llm_cost_router.api.routes.send_request",
+        return_value=_fake_response(text="a shallow, wrong answer"),
+    ):
+        with patch(
+            "llm_cost_router.verification.verifier.send_request",
+            side_effect=[_fake_response(text=reference_text), _fake_response(text="1")],
+        ):
+            with TestClient(app) as client:
+                resp = client.post(
+                    "/v1/completions", json={"prompt": "What is the capital of France?"}
+                )
+
+    assert resp.status_code == 200
+    with get_connection() as conn:
+        row = conn.execute(
+            "SELECT quality_score, escalated, escalated_model_id FROM request_log "
+            "ORDER BY id DESC LIMIT 1"
+        ).fetchone()
+    assert row == (1.0, 1, "claude-sonnet-5")
+
+
 def test_completions_skips_verification_when_judge_model_itself_is_routed() -> None:
     app = create_app()
     with patch(

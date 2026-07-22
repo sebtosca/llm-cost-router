@@ -18,6 +18,8 @@ CREATE TABLE IF NOT EXISTS request_log (
     latency_ms REAL,
     quality_score REAL,
     escalated INTEGER NOT NULL DEFAULT 0,
+    escalated_model_id TEXT,
+    cost_delta REAL,
     error TEXT
 );
 """

@@ -50,3 +50,12 @@ def update_quality_score(request_id: int, quality_score: float) -> None:
             "UPDATE request_log SET quality_score = ? WHERE id = ?",
             (quality_score, request_id),
         )
+
+
+def mark_escalated(request_id: int, escalated_model_id: str, cost_delta: float) -> None:
+    with get_connection() as conn:
+        conn.execute(
+            "UPDATE request_log SET escalated = 1, escalated_model_id = ?, "
+            "cost_delta = ? WHERE id = ?",
+            (escalated_model_id, cost_delta, request_id),
+        )

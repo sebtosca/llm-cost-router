@@ -1,5 +1,5 @@
 from llm_cost_router.storage.db import get_connection, init_db
-from llm_cost_router.storage.request_log import hash_prompt, log_request
+from llm_cost_router.storage.request_log import hash_prompt, log_request, mark_escalated
 
 
 def test_hash_prompt_deterministic() -> None:
@@ -40,7 +40,7 @@ def test_log_request_success_row() -> None:
     assert row[6] == 10  # input_tokens
     assert row[7] == 5  # output_tokens
     assert row[11] == 0  # escalated defaults to false
-    assert row[12] is None  # error
+    assert row[14] is None  # error
 
 
 def test_log_request_error_row() -> None:
@@ -57,4 +57,21 @@ def test_log_request_error_row() -> None:
         row = conn.execute("SELECT * FROM request_log").fetchone()
 
     assert row[6] is None  # input_tokens
-    assert row[12] == "boom"  # error
+    assert row[14] == "boom"  # error
+
+
+def test_mark_escalated_sets_columns() -> None:
+    init_db()
+    request_id = log_request(
+        prompt="p", tier=1, model_id="gpt-4o-mini", provider="openai"
+    )
+
+    mark_escalated(request_id, escalated_model_id="claude-sonnet-5", cost_delta=0.001)
+
+    with get_connection() as conn:
+        row = conn.execute(
+            "SELECT escalated, escalated_model_id, cost_delta FROM request_log WHERE id = ?",
+            (request_id,),
+        ).fetchone()
+
+    assert row == (1, "claude-sonnet-5", 0.001)

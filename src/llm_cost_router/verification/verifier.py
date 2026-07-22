@@ -3,12 +3,16 @@ import re
 from llm_cost_router.models.registry import get_model
 from llm_cost_router.models.types import ProviderRequestError
 from llm_cost_router.providers import send_request
-from llm_cost_router.storage.request_log import update_quality_score
+from llm_cost_router.storage.request_log import mark_escalated, update_quality_score
 
 # The judge model doubles as the reference-answer generator: its own response
 # to the prompt serves as the "what the best model would have said" baseline
 # that the cheap model's candidate answer is graded against.
 JUDGE_MODEL_ID = "claude-sonnet-5"
+
+# Below this, the cheap model's answer is considered a routing failure and
+# gets escalated.
+ESCALATION_THRESHOLD = 3.0
 
 _SCORE_RE = re.compile(r"[1-5]")
 
@@ -32,6 +36,14 @@ def verify_response(request_id: int, prompt: str, candidate_output: str) -> None
     been returned to the caller. Best-effort: any provider failure or unparsable
     judge output is swallowed rather than raised, since nothing is listening for
     the result by the time this runs - the row simply keeps quality_score=NULL.
+
+    Escalation here is necessarily after-the-fact: the original HTTP response
+    already went out to the caller by the time this background job runs, so
+    "escalating" can only mean logging that a stronger model's answer was
+    available and how much extra it would have cost - not re-delivering a
+    better response to a request that's already closed. This deviates from
+    the original spec's "re-run and return the better result if latency
+    permits," which assumed escalation happens inside the original request.
     """
     judge_model = get_model(JUDGE_MODEL_ID)
     try:
@@ -45,4 +57,8 @@ def verify_response(request_id: int, prompt: str, candidate_output: str) -> None
     if not match:
         return
 
-    update_quality_score(request_id, float(match.group()))
+    score = float(match.group())
+    update_quality_score(request_id, score)
+
+    if score < ESCALATION_THRESHOLD:
+        mark_escalated(request_id, escalated_model_id=judge_model.id, cost_delta=reference.cost_usd)
