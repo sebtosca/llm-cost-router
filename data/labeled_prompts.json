@@ -1,0 +1,918 @@
+[
+  {
+    "prompt": "What is the boiling point of mercury in Celsius?",
+    "tier": 1
+  },
+  {
+    "prompt": "Reformat this list into a comma-separated string: apples\nbananas\noranges",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the population of Brazil?",
+    "tier": 1
+  },
+  {
+    "prompt": "Why do quantitative easing typically stimulate economic growth? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of inflating asset bubbles.",
+    "tier": 3
+  },
+  {
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"The room smelled musty and the wifi barely worked the whole stay.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Write a short creative story about a gardener whose plants only grow when she tells them the truth, and explain why the ending you chose is meaningful.",
+    "tier": 3
+  },
+  {
+    "prompt": "Extract the order number from this text: Reach the office at info@acme.co or call 555-987-6543 between 9 and 5.",
+    "tier": 1
+  },
+  {
+    "prompt": "Why do minimum wage increases typically raise worker income? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of reducing entry-level hiring in small businesses.",
+    "tier": 3
+  },
+  {
+    "prompt": "Who is most associated with the Moon landing?",
+    "tier": 1
+  },
+  {
+    "prompt": "Compare the trade-offs between server-rendered pages and a single-page application for a content-heavy marketing site. Analyze SEO, initial load time, and interactivity step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation.",
+    "tier": 3
+  },
+  {
+    "prompt": "What is the melting point of mercury in Celsius?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the population of Vietnam?",
+    "tier": 1
+  },
+  {
+    "prompt": "Why do vaccination campaigns typically reduce disease transmission? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of moving too quickly without adequate safety monitoring.",
+    "tier": 3
+  },
+  {
+    "prompt": "Convert 5 kilograms to pounds.",
+    "tier": 1
+  },
+  {
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"I can't remember my password and the reset email never arrives.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Compare the trade-offs between a relational schema and a graph database for a social network's friend-recommendation feature. Analyze query flexibility, write throughput, and operational complexity step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation.",
+    "tier": 3
+  },
+  {
+    "prompt": "Translate the word 'bridge' into French.",
+    "tier": 1
+  },
+  {
+    "prompt": "Reformat this list into a comma-separated string: red\nblue\ngreen",
+    "tier": 1
+  },
+  {
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"The food arrived cold and the waiter was rude, but the manager comped our dessert.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Extract the date from this text: Reach the office at info@acme.co or call 555-987-6543 between 9 and 5.",
+    "tier": 1
+  },
+  {
+    "prompt": "Classify this email as spam or legitimate: \"Please find attached the invoice for last month's consulting work.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "What currency is used in France?",
+    "tier": 1
+  },
+  {
+    "prompt": "Write a persuasive essay arguing that all university degrees should be free, addressing likely counterarguments and using at least three distinct supporting points.",
+    "tier": 3
+  },
+  {
+    "prompt": "Write a short creative story about an astronaut who receives a radio signal from a version of Earth that made different choices, and explain why the ending you chose is meaningful.",
+    "tier": 3
+  },
+  {
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Great value for the price, portions were generous and tasty.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Compare the trade-offs between vertical scaling and horizontal scaling for a database approaching its write capacity limit. Analyze cost, downtime risk, and long-term headroom step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation.",
+    "tier": 3
+  },
+  {
+    "prompt": "Translate the word 'ocean' into German.",
+    "tier": 1
+  },
+  {
+    "prompt": "Extract the phone number from this text: Reach the office at info@acme.co or call 555-987-6543 between 9 and 5.",
+    "tier": 1
+  },
+  {
+    "prompt": "Extract the date from this text: Your order #48213 was placed on 2026-03-11 and will ship within 3 days.",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the atomic number of oxygen?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the population of Kenya?",
+    "tier": 1
+  },
+  {
+    "prompt": "Why do trade tariffs typically protect domestic industries? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of provoking retaliatory tariffs that hurt exporters.",
+    "tier": 3
+  },
+  {
+    "prompt": "Translate the word 'ocean' into French.",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the capital of Egypt?",
+    "tier": 1
+  },
+  {
+    "prompt": "Compare the trade-offs between in-house development and a third-party SaaS tool for a mid-size company's CRM needs. Analyze customization, total cost of ownership, and vendor lock-in step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation.",
+    "tier": 3
+  },
+  {
+    "prompt": "What language is primarily spoken in Norway?",
+    "tier": 1
+  },
+  {
+    "prompt": "Rewrite this sentence in passive voice: The dog chased the cat.",
+    "tier": 1
+  },
+  {
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"I was charged twice for my subscription this month.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "What currency is used in Brazil?",
+    "tier": 1
+  },
+  {
+    "prompt": "Write a persuasive essay arguing that cities should ban private cars from downtown cores, addressing likely counterarguments and using at least three distinct supporting points.",
+    "tier": 3
+  },
+  {
+    "prompt": "What currency is used in Vietnam?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the boiling point of ethanol in Celsius?",
+    "tier": 1
+  },
+  {
+    "prompt": "List the pros and cons of genetically modified crops.",
+    "tier": 2
+  },
+  {
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"It was fine, nothing special, but nothing wrong either.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "What is the capital of Japan?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the chemical symbol for oxygen?",
+    "tier": 1
+  },
+  {
+    "prompt": "Write a short creative story about a chess player who realizes their opponent is playing moves from a game that hasn't happened yet, and explain why the ending you chose is meaningful.",
+    "tier": 3
+  },
+  {
+    "prompt": "Compare the trade-offs between microservices and a monolithic architecture for a fast-growing startup's backend. Analyze team velocity, operational overhead, and deployment complexity step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation.",
+    "tier": 3
+  },
+  {
+    "prompt": "What is the population of Japan?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the capital of Poland?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the chemical symbol for helium?",
+    "tier": 1
+  },
+  {
+    "prompt": "What language is primarily spoken in France?",
+    "tier": 1
+  },
+  {
+    "prompt": "What language is primarily spoken in Egypt?",
+    "tier": 1
+  },
+  {
+    "prompt": "Translate the word 'river' into French.",
+    "tier": 1
+  },
+  {
+    "prompt": "Reformat this list into a comma-separated string: north\nsouth\neast",
+    "tier": 1
+  },
+  {
+    "prompt": "List the pros and cons of standardized testing.",
+    "tier": 2
+  },
+  {
+    "prompt": "Why do carbon taxes typically reduce emissions? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of imposing them without offsetting costs for low-income households.",
+    "tier": 3
+  },
+  {
+    "prompt": "Why do urban rewilding projects typically improve biodiversity? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of creating conflicts with existing land use and residents.",
+    "tier": 3
+  },
+  {
+    "prompt": "A judge is trying to decide between sentencing based on strict statutory guidelines and weighing mitigating personal circumstances. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning.",
+    "tier": 3
+  },
+  {
+    "prompt": "Who is most associated with the invention of the telephone?",
+    "tier": 1
+  },
+  {
+    "prompt": "Classify this email as spam or legitimate: \"Reminder: your dentist appointment is scheduled for next Tuesday at 3pm.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"Notifications stopped working after the last app update.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Classify this email as spam or legitimate: \"Hi team, attaching the updated slide deck for tomorrow's board meeting.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Given this data, identify the trend: Support ticket volume spikes every Monday morning and drops steadily through the rest of the week.",
+    "tier": 2
+  },
+  {
+    "prompt": "Translate the word 'ocean' into Spanish.",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the melting point of nitrogen in Celsius?",
+    "tier": 1
+  },
+  {
+    "prompt": "Extract the order number from this text: Contact Jane Doe at jane.doe@example.com or 555-123-4567 for support.",
+    "tier": 1
+  },
+  {
+    "prompt": "Outline the main steps involved in renewing a passport.",
+    "tier": 2
+  },
+  {
+    "prompt": "Write a short creative story about a translator who starts hearing a dead language whispered in dreams, and explain why the ending you chose is meaningful.",
+    "tier": 3
+  },
+  {
+    "prompt": "What currency is used in Poland?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the population of Egypt?",
+    "tier": 1
+  },
+  {
+    "prompt": "Translate the word 'bridge' into German.",
+    "tier": 1
+  },
+  {
+    "prompt": "Design a log aggregation pipeline for a fleet of thousands of IoT devices, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice.",
+    "tier": 3
+  },
+  {
+    "prompt": "Translate the word 'house' into German.",
+    "tier": 1
+  },
+  {
+    "prompt": "Write a short creative story about a librarian who discovers a book that rewrites itself based on the reader's regrets, and explain why the ending you chose is meaningful.",
+    "tier": 3
+  },
+  {
+    "prompt": "What is the capital of France?",
+    "tier": 1
+  },
+  {
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Absolutely loved the service, will be coming back every week!\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Given this data, identify the trend: Server error rates climbed steadily over two weeks before spiking sharply after Friday's deployment.",
+    "tier": 2
+  },
+  {
+    "prompt": "Compare the trade-offs between a fixed-rate mortgage and an adjustable-rate mortgage for a buyer planning to stay 10+ years. Analyze interest rate risk, monthly payment stability, and total interest paid step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation.",
+    "tier": 3
+  },
+  {
+    "prompt": "What is the population of Poland?",
+    "tier": 1
+  },
+  {
+    "prompt": "What year did the invention of the telephone happen?",
+    "tier": 1
+  },
+  {
+    "prompt": "List the pros and cons of electric vehicles.",
+    "tier": 2
+  },
+  {
+    "prompt": "What currency is used in Peru?",
+    "tier": 1
+  },
+  {
+    "prompt": "Summarize the following article in two sentences:\n\nContext: The city council voted 5-2 on Tuesday to approve a new zoning ordinance that will allow mixed-use development in the downtown corridor for the first time in twenty years. Supporters say the change will bring much-needed housing and foot traffic to a struggling business district, while critics worry about parking shortages and rising rents displacing long-time residents. The ordinance takes effect in 90 days, with a public review scheduled after the first year.",
+    "tier": 2
+  },
+  {
+    "prompt": "Extract the order number from this text: Your order #48213 was placed on 2026-03-11 and will ship within 3 days.",
+    "tier": 1
+  },
+  {
+    "prompt": "Write a short creative story about a clockmaker who finds a watch that runs backward during thunderstorms, and explain why the ending you chose is meaningful.",
+    "tier": 3
+  },
+  {
+    "prompt": "Write a persuasive essay arguing that social media platforms should verify the identity of all users, addressing likely counterarguments and using at least three distinct supporting points.",
+    "tier": 3
+  },
+  {
+    "prompt": "What is the capital of Peru?",
+    "tier": 1
+  },
+  {
+    "prompt": "Summarize the key differences between carpooling and public transit in a short paragraph.",
+    "tier": 2
+  },
+  {
+    "prompt": "Given this data, identify the trend: Customer churn increased from 3% to 9% monthly in the two months following the price increase.",
+    "tier": 2
+  },
+  {
+    "prompt": "Design a recommendation engine for an e-commerce platform with rapidly changing inventory, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice.",
+    "tier": 3
+  },
+  {
+    "prompt": "What is the boiling point of acetone in Celsius?",
+    "tier": 1
+  },
+  {
+    "prompt": "Given this data, identify the trend: Average response time rose from 2 hours to 14 hours over the last quarter as ticket volume tripled.",
+    "tier": 2
+  },
+  {
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"My account was locked after I entered the wrong password twice.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Translate the word 'garden' into German.",
+    "tier": 1
+  },
+  {
+    "prompt": "Rewrite this sentence in past tense: I walk to the store every morning.",
+    "tier": 1
+  },
+  {
+    "prompt": "Design a fraud detection system for a payments platform processing millions of transactions per day, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice.",
+    "tier": 3
+  },
+  {
+    "prompt": "Outline the main steps involved in brewing cold brew coffee.",
+    "tier": 2
+  },
+  {
+    "prompt": "A hospital administrator is trying to decide between expanding ICU capacity and investing in preventive care programs. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning.",
+    "tier": 3
+  },
+  {
+    "prompt": "What language is primarily spoken in Canada?",
+    "tier": 1
+  },
+  {
+    "prompt": "Summarize the key differences between a paper planner and a digital calendar app in a short paragraph.",
+    "tier": 2
+  },
+  {
+    "prompt": "A hiring manager is trying to decide between promoting a high-performing but disruptive employee and hiring a less experienced but more collaborative candidate. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning.",
+    "tier": 3
+  },
+  {
+    "prompt": "Summarize the key differences between public cloud hosting and on-premise servers in a short paragraph.",
+    "tier": 2
+  },
+  {
+    "prompt": "Outline the main steps involved in planning a small conference.",
+    "tier": 2
+  },
+  {
+    "prompt": "Translate the word 'house' into French.",
+    "tier": 1
+  },
+  {
+    "prompt": "Translate the word 'river' into Spanish.",
+    "tier": 1
+  },
+  {
+    "prompt": "Identify the main topic of this paragraph in one sentence: Researchers announced a new battery chemistry this week that reportedly charges to 80% capacity in under ten minutes while using significantly less cobalt than current designs. The team cautions that manufacturing at scale is still years away and that lab results often don't translate directly to commercial products, but several automakers have already expressed interest in licensing the technology for future vehicle lines.",
+    "tier": 2
+  },
+  {
+    "prompt": "Write a persuasive essay arguing that remote work should be a legal right for eligible jobs, addressing likely counterarguments and using at least three distinct supporting points.",
+    "tier": 3
+  },
+  {
+    "prompt": "What is the boiling point of nitrogen in Celsius?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the atomic number of gold?",
+    "tier": 1
+  },
+  {
+    "prompt": "Rewrite this sentence in future tense: She finishes her homework.",
+    "tier": 1
+  },
+  {
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Customer support was unhelpful and kept transferring my call.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Given this data, identify the trend: Warehouse shipping errors fell from 5% to 0.8% after the new barcode scanning process was introduced.",
+    "tier": 2
+  },
+  {
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Terrible experience, waited an hour and the order was still wrong.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Identify the main topic of this paragraph in one sentence: A regional airline announced it will add three new routes next spring, connecting two mid-sized cities that have not had direct flights in over a decade. Local business groups welcomed the news, saying the lack of air service has been a recurring complaint from companies considering relocating to the area, though some analysts questioned whether demand would be strong enough to sustain the routes past the first year.",
+    "tier": 2
+  },
+  {
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"The app keeps crashing whenever I open the settings page.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Outline the main steps involved in onboarding a new employee.",
+    "tier": 2
+  },
+  {
+    "prompt": "Extract the email address from this text: Reach the office at info@acme.co or call 555-987-6543 between 9 and 5.",
+    "tier": 1
+  },
+  {
+    "prompt": "Design a search indexing pipeline for a marketplace with constantly updated listings, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice.",
+    "tier": 3
+  },
+  {
+    "prompt": "Write a persuasive essay arguing that AI-generated content should always be labeled as such, addressing likely counterarguments and using at least three distinct supporting points.",
+    "tier": 3
+  },
+  {
+    "prompt": "What is the population of Peru?",
+    "tier": 1
+  },
+  {
+    "prompt": "Given this data, identify the trend: Website conversion rate dropped from 4.2% to 2.1% after the checkout flow was redesigned.",
+    "tier": 2
+  },
+  {
+    "prompt": "List the pros and cons of remote work.",
+    "tier": 2
+  },
+  {
+    "prompt": "What year did the fall of the Berlin Wall happen?",
+    "tier": 1
+  },
+  {
+    "prompt": "Summarize the key differences between gas stoves and induction stoves in a short paragraph.",
+    "tier": 2
+  },
+  {
+    "prompt": "Rewrite this sentence to be more formal: hey can u send that file over",
+    "tier": 1
+  },
+  {
+    "prompt": "Why do algorithmic content recommendation typically increase engagement? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of reinforcing filter bubbles and misinformation.",
+    "tier": 3
+  },
+  {
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Fast shipping and the product matched the description exactly.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"The instructor was engaging and answered every question patiently.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"Can you tell me when my next invoice is due?\"",
+    "tier": 2
+  },
+  {
+    "prompt": "What is the chemical symbol for sodium?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the capital of Canada?",
+    "tier": 1
+  },
+  {
+    "prompt": "List the pros and cons of open-plan offices.",
+    "tier": 2
+  },
+  {
+    "prompt": "Extract the date from this text: Contact Jane Doe at jane.doe@example.com or 555-123-4567 for support.",
+    "tier": 1
+  },
+  {
+    "prompt": "What year did the Moon landing happen?",
+    "tier": 1
+  },
+  {
+    "prompt": "A nonprofit director is trying to decide between spending more on direct aid now and investing in long-term capacity building. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning.",
+    "tier": 3
+  },
+  {
+    "prompt": "Outline the main steps involved in migrating a database to a new server.",
+    "tier": 2
+  },
+  {
+    "prompt": "What currency is used in Egypt?",
+    "tier": 1
+  },
+  {
+    "prompt": "Who is most associated with the fall of the Berlin Wall?",
+    "tier": 1
+  },
+  {
+    "prompt": "Why do interest rate hikes typically slow down inflation? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of raising rates too aggressively and triggering a recession.",
+    "tier": 3
+  },
+  {
+    "prompt": "Translate the word 'mountain' into French.",
+    "tier": 1
+  },
+  {
+    "prompt": "Outline the main steps involved in publishing a mobile app update.",
+    "tier": 2
+  },
+  {
+    "prompt": "Identify the main topic of this paragraph in one sentence: The city council voted 5-2 on Tuesday to approve a new zoning ordinance that will allow mixed-use development in the downtown corridor for the first time in twenty years. Supporters say the change will bring much-needed housing and foot traffic to a struggling business district, while critics worry about parking shortages and rising rents displacing long-time residents. The ordinance takes effect in 90 days, with a public review scheduled after the first year.",
+    "tier": 2
+  },
+  {
+    "prompt": "List the pros and cons of universal basic income.",
+    "tier": 2
+  },
+  {
+    "prompt": "Write a persuasive essay arguing that companies should be required to offer a four-day work week, addressing likely counterarguments and using at least three distinct supporting points.",
+    "tier": 3
+  },
+  {
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"The export button on the dashboard doesn't do anything.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "What is the melting point of ethanol in Celsius?",
+    "tier": 1
+  },
+  {
+    "prompt": "What currency is used in Canada?",
+    "tier": 1
+  },
+  {
+    "prompt": "Translate the word 'mountain' into Spanish.",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the atomic number of helium?",
+    "tier": 1
+  },
+  {
+    "prompt": "Convert 100 Fahrenheit to Celsius.",
+    "tier": 1
+  },
+  {
+    "prompt": "Extract the email address from this text: Your order #48213 was placed on 2026-03-11 and will ship within 3 days.",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the melting point of water in Celsius?",
+    "tier": 1
+  },
+  {
+    "prompt": "Extract the email address from this text: Contact Jane Doe at jane.doe@example.com or 555-123-4567 for support.",
+    "tier": 1
+  },
+  {
+    "prompt": "Summarize the following article in two sentences:\n\nContext: Researchers announced a new battery chemistry this week that reportedly charges to 80% capacity in under ten minutes while using significantly less cobalt than current designs. The team cautions that manufacturing at scale is still years away and that lab results often don't translate directly to commercial products, but several automakers have already expressed interest in licensing the technology for future vehicle lines.",
+    "tier": 2
+  },
+  {
+    "prompt": "Design a notification delivery system for an app needing to reach users across push, email, and SMS reliably, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice.",
+    "tier": 3
+  },
+  {
+    "prompt": "Compare the trade-offs between a message queue and direct synchronous API calls for an order-processing pipeline. Analyze reliability, latency, and failure isolation step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation.",
+    "tier": 3
+  },
+  {
+    "prompt": "What is the population of Norway?",
+    "tier": 1
+  },
+  {
+    "prompt": "A school principal is trying to decide between adopting a strict zero-tolerance discipline policy and using a restorative justice approach. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning.",
+    "tier": 3
+  },
+  {
+    "prompt": "Summarize the key differences between a savings account and a certificate of deposit in a short paragraph.",
+    "tier": 2
+  },
+  {
+    "prompt": "Translate the word 'garden' into Spanish.",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the chemical symbol for carbon?",
+    "tier": 1
+  },
+  {
+    "prompt": "Summarize the key differences between hardcover books and e-readers in a short paragraph.",
+    "tier": 2
+  },
+  {
+    "prompt": "What is the population of Canada?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the melting point of acetone in Celsius?",
+    "tier": 1
+  },
+  {
+    "prompt": "List the pros and cons of a four-day work week.",
+    "tier": 2
+  },
+  {
+    "prompt": "Convert 50 meters to feet.",
+    "tier": 1
+  },
+  {
+    "prompt": "Outline the main steps involved in setting up a home wifi network.",
+    "tier": 2
+  },
+  {
+    "prompt": "Outline the main steps involved in filing a small business tax return.",
+    "tier": 2
+  },
+  {
+    "prompt": "Translate the word 'garden' into French.",
+    "tier": 1
+  },
+  {
+    "prompt": "Classify this email as spam or legitimate: \"URGENT: verify your account immediately or it will be suspended today\"",
+    "tier": 2
+  },
+  {
+    "prompt": "What is the capital of Kenya?",
+    "tier": 1
+  },
+  {
+    "prompt": "Extract the phone number from this text: Contact Jane Doe at jane.doe@example.com or 555-123-4567 for support.",
+    "tier": 1
+  },
+  {
+    "prompt": "What language is primarily spoken in Vietnam?",
+    "tier": 1
+  },
+  {
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"I'd like to update the billing address on my account.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Summarize the following article in two sentences:\n\nContext: A regional airline announced it will add three new routes next spring, connecting two mid-sized cities that have not had direct flights in over a decade. Local business groups welcomed the news, saying the lack of air service has been a recurring complaint from companies considering relocating to the area, though some analysts questioned whether demand would be strong enough to sustain the routes past the first year.",
+    "tier": 2
+  },
+  {
+    "prompt": "What language is primarily spoken in Brazil?",
+    "tier": 1
+  },
+  {
+    "prompt": "Translate the word 'river' into German.",
+    "tier": 1
+  },
+  {
+    "prompt": "A city planner is trying to decide between approving a new highway that cuts commute times and preserving a historic neighborhood it would displace. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning.",
+    "tier": 3
+  },
+  {
+    "prompt": "Convert 10 miles to kilometers.",
+    "tier": 1
+  },
+  {
+    "prompt": "Convert 2 gallons to liters.",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the capital of Norway?",
+    "tier": 1
+  },
+  {
+    "prompt": "Extract the phone number from this text: Your order #48213 was placed on 2026-03-11 and will ship within 3 days.",
+    "tier": 1
+  },
+  {
+    "prompt": "A product manager is trying to decide between shipping a feature quickly with technical debt and delaying launch to build it properly. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning.",
+    "tier": 3
+  },
+  {
+    "prompt": "Design a multi-tenant billing system for a B2B SaaS product with usage-based pricing, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice.",
+    "tier": 3
+  },
+  {
+    "prompt": "What year did the first Olympics happen?",
+    "tier": 1
+  },
+  {
+    "prompt": "A startup founder is trying to decide between raising venture capital for faster growth and staying bootstrapped for more control. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning.",
+    "tier": 3
+  },
+  {
+    "prompt": "What language is primarily spoken in Poland?",
+    "tier": 1
+  },
+  {
+    "prompt": "Write a short creative story about a cartographer mapping a city that rearranges its streets every night, and explain why the ending you chose is meaningful.",
+    "tier": 3
+  },
+  {
+    "prompt": "Who is most associated with the first Olympics?",
+    "tier": 1
+  },
+  {
+    "prompt": "Design a real-time chat application for supporting millions of concurrent users, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice.",
+    "tier": 3
+  },
+  {
+    "prompt": "Summarize the key differences between freelancing and full-time employment in a short paragraph.",
+    "tier": 2
+  },
+  {
+    "prompt": "What is the boiling point of water in Celsius?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the population of France?",
+    "tier": 1
+  },
+  {
+    "prompt": "Translate the word 'bridge' into Spanish.",
+    "tier": 1
+  },
+  {
+    "prompt": "List the pros and cons of nuclear energy.",
+    "tier": 2
+  },
+  {
+    "prompt": "Rewrite this sentence in third person: I think this plan will work.",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the chemical symbol for iron?",
+    "tier": 1
+  },
+  {
+    "prompt": "Reformat this list into a comma-separated string: cats\ndogs\nbirds",
+    "tier": 1
+  },
+  {
+    "prompt": "Design a video transcoding service for a platform handling variable, bursty upload traffic, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice.",
+    "tier": 3
+  },
+  {
+    "prompt": "Compare the trade-offs between a relational database and a document store for a high-write telemetry system. Analyze latency, consistency, and schema flexibility step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation.",
+    "tier": 3
+  },
+  {
+    "prompt": "Given this data, identify the trend: Daily active users have stayed flat around 50,000 for the past three months despite two feature launches.",
+    "tier": 2
+  },
+  {
+    "prompt": "Compare the trade-offs between renting and buying for a young professional's first home decision. Analyze long-term cost, flexibility, and financial risk step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation.",
+    "tier": 3
+  },
+  {
+    "prompt": "What is the chemical symbol for gold?",
+    "tier": 1
+  },
+  {
+    "prompt": "Classify this email as spam or legitimate: \"Limited time offer - 90% off all products, act now before it's gone!\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Write a persuasive essay arguing that all new commercial buildings should be required to generate their own energy, addressing likely counterarguments and using at least three distinct supporting points.",
+    "tier": 3
+  },
+  {
+    "prompt": "List the pros and cons of outsourcing customer support.",
+    "tier": 2
+  },
+  {
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Decent quality but overpriced compared to similar products.\"",
+    "tier": 2
+  },
+  {
+    "prompt": "What is the atomic number of carbon?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the atomic number of sodium?",
+    "tier": 1
+  },
+  {
+    "prompt": "What language is primarily spoken in Kenya?",
+    "tier": 1
+  },
+  {
+    "prompt": "What language is primarily spoken in Japan?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the capital of Brazil?",
+    "tier": 1
+  },
+  {
+    "prompt": "Reformat this list into a comma-separated string: Monday\nTuesday\nWednesday",
+    "tier": 1
+  },
+  {
+    "prompt": "List the pros and cons of self-driving cars.",
+    "tier": 2
+  },
+  {
+    "prompt": "What currency is used in Kenya?",
+    "tier": 1
+  },
+  {
+    "prompt": "Classify this email as spam or legitimate: \"Congratulations! You've won a $1000 gift card, click here to claim now!!!\"",
+    "tier": 2
+  },
+  {
+    "prompt": "Write a persuasive essay arguing that space exploration funding should be redirected to climate research, addressing likely counterarguments and using at least three distinct supporting points.",
+    "tier": 3
+  },
+  {
+    "prompt": "Summarize the key differences between a standing desk and a traditional desk in a short paragraph.",
+    "tier": 2
+  },
+  {
+    "prompt": "What currency is used in Norway?",
+    "tier": 1
+  },
+  {
+    "prompt": "Compare the trade-offs between a native mobile app and a cross-platform framework for a startup building its first mobile product. Analyze development speed, performance, and platform-specific features step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation.",
+    "tier": 3
+  },
+  {
+    "prompt": "What language is primarily spoken in Peru?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the atomic number of iron?",
+    "tier": 1
+  },
+  {
+    "prompt": "Translate the word 'house' into Spanish.",
+    "tier": 1
+  },
+  {
+    "prompt": "Translate the word 'mountain' into German.",
+    "tier": 1
+  },
+  {
+    "prompt": "Write a short creative story about a lighthouse keeper who discovers a message in a bottle that predicts the future, and explain why the ending you chose is meaningful.",
+    "tier": 3
+  },
+  {
+    "prompt": "What currency is used in Japan?",
+    "tier": 1
+  },
+  {
+    "prompt": "What is the capital of Vietnam?",
+    "tier": 1
+  },
+  {
+    "prompt": "Given this data, identify the trend: Monthly signups grew from 200 to 1,800 over the past six months, with the sharpest increase after the referral program launched.",
+    "tier": 2
+  }
+]
