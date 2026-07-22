@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.git/
+.env
+.pytest_cache/
+tests/
+dashboard/
+data/router.db
+data/classifier_model.joblib
+data/results/*.json
