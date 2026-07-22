@@ -1,0 +1,10 @@
+[
+  {"id": "p1", "prompt": "What is the capital of France?"},
+  {"id": "p2", "prompt": "Extract the email address and phone number from this text: Contact Jane Doe at jane.doe@example.com or 555-123-4567 for support."},
+  {"id": "p3", "prompt": "Reformat this list into a comma-separated string: apples\nbananas\noranges"},
+  {"id": "p4", "prompt": "Summarize the following article in two sentences:\n\nContext: The city council voted 5-2 on Tuesday to approve a new zoning ordinance that will allow mixed-use development in the downtown corridor for the first time in twenty years. Supporters say the change will bring much-needed housing and foot traffic to a struggling business district, while critics worry about parking shortages and rising rents displacing long-time residents. The ordinance takes effect in 90 days, with a public review scheduled after the first year."},
+  {"id": "p5", "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"The food arrived cold and the waiter was rude, but the manager comped our dessert.\""},
+  {"id": "p6", "prompt": "Compare the trade-offs between using a relational database and a document store for a high-write telemetry system. Analyze latency, consistency, and schema flexibility step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."},
+  {"id": "p7", "prompt": "Write a short creative story about a lighthouse keeper who discovers a message in a bottle that predicts the future, and explain why the ending you chose is meaningful."},
+  {"id": "p8", "prompt": "Why do interest rate hikes typically slow down inflation, and what are the risks if a central bank raises rates too aggressively? Give a nuanced, step by step explanation of the mechanisms involved."}
+]

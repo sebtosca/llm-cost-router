@@ -1,0 +1,8 @@
+# Maps complexity tier -> model id (must match a key in MODEL_REGISTRY,
+# see src/llm_cost_router/models/registry.py). Edit this file to change
+# routing without touching code; the app validates it at startup.
+# Other registered models available to swap in: gpt-4o, claude-haiku-4-5.
+routing:
+  tier_1: gpt-4o-mini       # cheapest cloud model - simple reformatting/extraction/Q&A
+  tier_2: gemini-3-flash    # cheap mid-tier - summarization/classification
+  tier_3: claude-sonnet-5   # highest quality - multi-step reasoning/creative
