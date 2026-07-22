@@ -10,7 +10,7 @@ model across OpenAI, Anthropic, and Gemini.
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -e ".[dev]"
+pip install -e ".[dev,dashboard]"
 cp .env.example .env   # then fill in OPENAI_API_KEY / ANTHROPIC_API_KEY / GEMINI_API_KEY
 ```
 
@@ -36,6 +36,29 @@ Routing tiers are configured in [config/routing.yaml](config/routing.yaml);
 edit the tier -> model mapping there without touching code (validated against
 the model registry at startup).
 
+Every request is logged to a local SQLite file (`data/router.db`, gitignored).
+After each cheap-tier response returns, a background task re-answers the
+prompt with the judge model (`claude-sonnet-5`), scores agreement via
+LLM-as-judge, and writes `quality_score` back onto the log row - a score
+below 3.0 marks the row `escalated=true` with the cost delta. See
+[docs/ROADMAP.md](docs/ROADMAP.md) (local-only, gitignored) for the full
+step-by-step design.
+
+```bash
+curl localhost:8000/v1/models
+curl localhost:8000/v1/stats
+```
+
+## Cost dashboard
+
+```bash
+streamlit run dashboard/app.py
+```
+
+Reads directly from `data/router.db`: headline cost-savings metrics, cost
+per day vs. an all-priciest-model baseline, escalation rate over time,
+routing distribution by model, and quality score distribution.
+
 ## Baseline test script
 
 Sends a fixed prompt set to every registered model and reports cost/latency
@@ -47,7 +70,5 @@ python scripts/baseline_test.py
 
 ## Not yet built
 
-Scikit-learn classifier, async quality verification / auto-escalation /
-feedback loop, SQLite request logging, cost dashboard, `GET /v1/models`,
-`GET /v1/stats`, `PUT /v1/routing-config`, docker/docker-compose, load
-testing.
+Scikit-learn classifier + labeled dataset, classifier feedback loop,
+`PUT /v1/routing-config`, docker/docker-compose, load testing.

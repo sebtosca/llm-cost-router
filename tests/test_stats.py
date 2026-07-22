@@ -1,7 +1,7 @@
 from llm_cost_router.models.registry import get_model
 from llm_cost_router.storage.db import init_db
-from llm_cost_router.storage.request_log import log_request
-from llm_cost_router.storage.stats import compute_stats
+from llm_cost_router.storage.request_log import log_request, mark_escalated
+from llm_cost_router.storage.stats import compute_daily_series, compute_stats
 
 
 def test_compute_stats_empty() -> None:
@@ -60,3 +60,44 @@ def test_compute_stats_aggregates_and_savings() -> None:
     assert stats.baseline_cost_usd == expected_baseline
     assert stats.savings_usd == expected_baseline - stats.total_cost_usd
     assert stats.savings_pct > 0
+
+
+def test_compute_daily_series_empty() -> None:
+    init_db()
+    assert compute_daily_series() == []
+
+
+def test_compute_daily_series_aggregates_one_day() -> None:
+    init_db()
+    m = get_model("gpt-4o-mini")
+    id1 = log_request(
+        prompt="p1",
+        tier=1,
+        model_id="gpt-4o-mini",
+        provider="openai",
+        input_tokens=1000,
+        output_tokens=200,
+        cost_usd=1000 * m.cost_per_input_token + 200 * m.cost_per_output_token,
+        latency_ms=100.0,
+    )
+    log_request(
+        prompt="p2",
+        tier=1,
+        model_id="gpt-4o-mini",
+        provider="openai",
+        input_tokens=500,
+        output_tokens=100,
+        cost_usd=500 * m.cost_per_input_token + 100 * m.cost_per_output_token,
+        latency_ms=100.0,
+    )
+    mark_escalated(id1, escalated_model_id="claude-sonnet-5", cost_delta=0.001)
+
+    series = compute_daily_series()
+
+    assert len(series) == 1
+    day = series[0]
+    assert day.requests == 2
+    assert day.escalations == 1
+    assert day.escalation_rate == 0.5
+    assert day.cost_usd > 0
+    assert day.baseline_usd > day.cost_usd
