@@ -14,6 +14,21 @@ class Stats(BaseModel):
     savings_pct: float
 
 
+class DailyStat(BaseModel):
+    date: str
+    cost_usd: float
+    baseline_usd: float
+    requests: int
+    escalations: int
+    escalation_rate: float
+
+
+def _priciest_model():
+    # "What it would have cost if every request had gone to the priciest
+    # registered model instead" - the headline cost-savings comparison.
+    return max(list_models(), key=lambda m: m.cost_per_input_token + m.cost_per_output_token)
+
+
 def compute_stats() -> Stats:
     with get_connection() as conn:
         rows = conn.execute(
@@ -36,11 +51,7 @@ def compute_stats() -> Stats:
         total_input_tokens += input_tokens or 0
         total_output_tokens += output_tokens or 0
 
-    # "What it would have cost if every request had gone to the priciest
-    # registered model instead" - the headline cost-savings comparison.
-    priciest = max(
-        list_models(), key=lambda m: m.cost_per_input_token + m.cost_per_output_token
-    )
+    priciest = _priciest_model()
     baseline_cost_usd = (
         total_input_tokens * priciest.cost_per_input_token
         + total_output_tokens * priciest.cost_per_output_token
@@ -57,3 +68,40 @@ def compute_stats() -> Stats:
         savings_usd=savings_usd,
         savings_pct=savings_pct,
     )
+
+
+def compute_daily_series() -> list[DailyStat]:
+    """One row per UTC date (from the ISO timestamp) for the dashboard's
+    cost-over-time and escalation-rate-over-time charts."""
+    with get_connection() as conn:
+        rows = conn.execute(
+            "SELECT timestamp, cost_usd, input_tokens, output_tokens, escalated "
+            "FROM request_log WHERE error IS NULL"
+        ).fetchall()
+
+    priciest = _priciest_model()
+    daily: dict[str, dict] = {}
+
+    for timestamp, cost_usd, input_tokens, output_tokens, escalated in rows:
+        date = timestamp[:10]
+        bucket = daily.setdefault(
+            date, {"cost_usd": 0.0, "baseline_usd": 0.0, "requests": 0, "escalations": 0}
+        )
+        bucket["cost_usd"] += cost_usd or 0.0
+        bucket["baseline_usd"] += (input_tokens or 0) * priciest.cost_per_input_token + (
+            output_tokens or 0
+        ) * priciest.cost_per_output_token
+        bucket["requests"] += 1
+        bucket["escalations"] += escalated or 0
+
+    return [
+        DailyStat(
+            date=date,
+            cost_usd=bucket["cost_usd"],
+            baseline_usd=bucket["baseline_usd"],
+            requests=bucket["requests"],
+            escalations=bucket["escalations"],
+            escalation_rate=bucket["escalations"] / bucket["requests"] if bucket["requests"] else 0.0,
+        )
+        for date, bucket in sorted(daily.items())
+    ]
