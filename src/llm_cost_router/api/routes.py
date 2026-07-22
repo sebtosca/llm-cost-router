@@ -9,6 +9,8 @@ from llm_cost_router.api.schemas import (
 from llm_cost_router.models.registry import list_models
 from llm_cost_router.models.types import ProviderRequestError
 from llm_cost_router.providers import send_request
+from llm_cost_router.router.config import RoutingConfig, validate_routing_config
+from llm_cost_router.router.router import Router
 from llm_cost_router.storage.request_log import log_request
 from llm_cost_router.storage.stats import Stats, compute_stats
 from llm_cost_router.verification.verifier import JUDGE_MODEL_ID, verify_response
@@ -91,3 +93,14 @@ def get_models() -> ModelsResponse:
 @router.get("/v1/stats", response_model=Stats)
 def get_stats() -> Stats:
     return compute_stats()
+
+
+@router.put("/v1/routing-config", response_model=RoutingConfig)
+def update_routing_config(new_config: RoutingConfig, request: Request) -> RoutingConfig:
+    try:
+        validate_routing_config(new_config)
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    request.app.state.router = Router(new_config)
+    return new_config

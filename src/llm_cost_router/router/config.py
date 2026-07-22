@@ -27,17 +27,22 @@ class RoutingConfig(BaseModel):
         return self.routing[f"tier_{tier.value}"]
 
 
-def load_routing_config(path: Path) -> RoutingConfig:
-    raw = yaml.safe_load(path.read_text())
-    config = RoutingConfig.model_validate(raw)
-
+def validate_routing_config(config: RoutingConfig) -> None:
+    """Cross-validates every model id referenced in the config against the
+    model registry. Shared by the startup file loader and the runtime
+    PUT /v1/routing-config endpoint so both fail with the same clear error."""
     for tier_key, model_id in config.routing.items():
         try:
             registry.get_model(model_id)
         except KeyError:
             raise ValueError(
-                f"routing.yaml '{tier_key}' references unknown model id "
+                f"routing config '{tier_key}' references unknown model id "
                 f"'{model_id}' (not in MODEL_REGISTRY)"
             ) from None
 
+
+def load_routing_config(path: Path) -> RoutingConfig:
+    raw = yaml.safe_load(path.read_text())
+    config = RoutingConfig.model_validate(raw)
+    validate_routing_config(config)
     return config

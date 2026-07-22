@@ -49,6 +49,19 @@ curl localhost:8000/v1/models
 curl localhost:8000/v1/stats
 ```
 
+Routing can also be hot-swapped at runtime without a restart:
+
+```bash
+curl -X PUT localhost:8000/v1/routing-config \
+  -H 'Content-Type: application/json' \
+  -d '{"routing": {"tier_1": "claude-haiku-4-5", "tier_2": "gemini-3-flash", "tier_3": "claude-sonnet-5"}}'
+```
+
+Validated the same way as `config/routing.yaml` at startup (unknown model ids
+are rejected with `422` and the previous config stays in effect) - the change
+only lives in memory for the running process, `config/routing.yaml` on disk
+is untouched.
+
 ## Cost dashboard
 
 ```bash
@@ -105,4 +118,4 @@ automated weekly schedule is a follow-up, not built here.
 
 ## Not yet built
 
-`PUT /v1/routing-config`, docker/docker-compose, load testing.
+docker/docker-compose, load testing.
