@@ -48,3 +48,27 @@ def test_completions_empty_prompt_rejected() -> None:
         resp = client.post("/v1/completions", json={"prompt": ""})
 
     assert resp.status_code == 422
+
+
+def test_get_models_lists_registry() -> None:
+    app = create_app()
+    with TestClient(app) as client:
+        resp = client.get("/v1/models")
+
+    assert resp.status_code == 200
+    models = resp.json()["models"]
+    ids = {m["id"] for m in models}
+    assert "gpt-4o-mini" in ids
+    assert "claude-sonnet-5" in ids
+    assert "gemini-3-flash" in ids
+
+
+def test_get_stats_empty_db() -> None:
+    app = create_app()
+    with TestClient(app) as client:
+        resp = client.get("/v1/stats")
+
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["total_requests"] == 0
+    assert body["total_cost_usd"] == 0.0

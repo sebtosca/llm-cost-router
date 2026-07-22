@@ -14,3 +14,15 @@ class CompletionResponse(BaseModel):
     output_tokens: int
     cost_usd: float
     latency_ms: float
+
+
+class ModelInfo(BaseModel):
+    id: str
+    provider: str
+    cost_per_input_token: float
+    cost_per_output_token: float
+    quality_tier: int
+
+
+class ModelsResponse(BaseModel):
+    models: list[ModelInfo]
