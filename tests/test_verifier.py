@@ -2,6 +2,7 @@ from unittest.mock import patch
 
 from llm_cost_router.models.types import ProviderRequestError, Response
 from llm_cost_router.storage.db import get_connection, init_db
+from llm_cost_router.storage.failures import load_classifier_failures
 from llm_cost_router.storage.request_log import log_request
 from llm_cost_router.verification.verifier import verify_response
 
@@ -35,7 +36,7 @@ def test_verify_response_writes_quality_score() -> None:
         "llm_cost_router.verification.verifier.send_request",
         side_effect=[_fake_response("Paris is the capital of France."), _fake_response("5")],
     ):
-        verify_response(request_id, "What is the capital of France?", "Paris")
+        verify_response(request_id, "What is the capital of France?", "Paris", 1)
 
     with get_connection() as conn:
         row = conn.execute(
@@ -56,7 +57,7 @@ def test_verify_response_escalates_on_low_score() -> None:
         "llm_cost_router.verification.verifier.send_request",
         side_effect=[reference_response, _fake_response("2")],
     ):
-        verify_response(request_id, "p", "a weak candidate answer")
+        verify_response(request_id, "p", "a weak candidate answer", 1)
 
     with get_connection() as conn:
         row = conn.execute(
@@ -66,6 +67,9 @@ def test_verify_response_escalates_on_low_score() -> None:
         ).fetchone()
 
     assert row == (2.0, 1, "claude-sonnet-5", reference_response.cost_usd)
+
+    failures = load_classifier_failures()
+    assert failures == [{"prompt": "p", "tier": 3}]
 
 
 def test_verify_response_no_escalation_on_high_score() -> None:
@@ -78,7 +82,7 @@ def test_verify_response_no_escalation_on_high_score() -> None:
         "llm_cost_router.verification.verifier.send_request",
         side_effect=[_fake_response("a good reference answer"), _fake_response("4")],
     ):
-        verify_response(request_id, "p", "a solid candidate answer")
+        verify_response(request_id, "p", "a solid candidate answer", 1)
 
     with get_connection() as conn:
         row = conn.execute(
@@ -99,7 +103,7 @@ def test_verify_response_unparsable_judge_output_leaves_score_null() -> None:
         "llm_cost_router.verification.verifier.send_request",
         side_effect=[_fake_response("some reference"), _fake_response("not a score")],
     ):
-        verify_response(request_id, "p", "candidate")
+        verify_response(request_id, "p", "candidate", 1)
 
     with get_connection() as conn:
         row = conn.execute(
@@ -119,7 +123,7 @@ def test_verify_response_provider_error_is_swallowed() -> None:
         "llm_cost_router.verification.verifier.send_request",
         side_effect=ProviderRequestError("boom"),
     ):
-        verify_response(request_id, "p", "candidate")  # must not raise
+        verify_response(request_id, "p", "candidate", 1)  # must not raise
 
     with get_connection() as conn:
         row = conn.execute(

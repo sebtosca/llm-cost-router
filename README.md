@@ -85,7 +85,24 @@ CLASSIFIER=sklearn uvicorn llm_cost_router.api.app:app --app-dir src --port 8000
 The trained model file is gitignored (a regenerable build artifact) - run
 `train_classifier.py` once after cloning before setting `CLASSIFIER=sklearn`.
 
+## Classifier feedback loop
+
+When the async verifier (`verification/verifier.py`) escalates a cheap-tier
+response (quality score below 3.0), it also records a `classifier_failures`
+row: the actual prompt text, the tier the classifier picked, and the tier it
+should have picked (the judge model's tier). This is a deliberate, narrow
+exception to `request_log`'s hash-only privacy policy - only escalated
+requests get their prompt text retained, and only for retraining.
+
+```bash
+python scripts/retrain_classifier.py
+```
+
+Merges accumulated failures into the base labeled dataset, evaluates both the
+baseline and merged model on the same held-out split, and only swaps in the
+new model file if it doesn't regress. This is manually triggered for now - an
+automated weekly schedule is a follow-up, not built here.
+
 ## Not yet built
 
-Classifier feedback loop (retraining from verification failures),
 `PUT /v1/routing-config`, docker/docker-compose, load testing.

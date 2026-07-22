@@ -86,7 +86,12 @@ def test_completions_adversarial_prompt_shows_up_escalated() -> None:
             "SELECT quality_score, escalated, escalated_model_id FROM request_log "
             "ORDER BY id DESC LIMIT 1"
         ).fetchone()
+        failure_row = conn.execute(
+            "SELECT prompt, original_tier, corrected_tier FROM classifier_failures "
+            "ORDER BY id DESC LIMIT 1"
+        ).fetchone()
     assert row == (1.0, 1, "claude-sonnet-5")
+    assert failure_row == ("What is the capital of France?", 1, 3)
 
 
 def test_completions_skips_verification_when_judge_model_itself_is_routed() -> None:

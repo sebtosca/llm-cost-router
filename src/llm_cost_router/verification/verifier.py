@@ -3,6 +3,7 @@ import re
 from llm_cost_router.models.registry import get_model
 from llm_cost_router.models.types import ProviderRequestError
 from llm_cost_router.providers import send_request
+from llm_cost_router.storage.failures import record_classifier_failure
 from llm_cost_router.storage.request_log import mark_escalated, update_quality_score
 
 # The judge model doubles as the reference-answer generator: its own response
@@ -31,7 +32,7 @@ def _build_judge_prompt(prompt: str, candidate_answer: str, reference_answer: st
     )
 
 
-def verify_response(request_id: int, prompt: str, candidate_output: str) -> None:
+def verify_response(request_id: int, prompt: str, candidate_output: str, original_tier: int) -> None:
     """Runs as a FastAPI BackgroundTask after a cheap-tier response has already
     been returned to the caller. Best-effort: any provider failure or unparsable
     judge output is swallowed rather than raised, since nothing is listening for
@@ -44,6 +45,10 @@ def verify_response(request_id: int, prompt: str, candidate_output: str) -> None
     better response to a request that's already closed. This deviates from
     the original spec's "re-run and return the better result if latency
     permits," which assumed escalation happens inside the original request.
+
+    On escalation, also records a classifier_failures row (original_tier ->
+    the judge model's tier) - the training example the feedback loop
+    (classifier/retrain.py) uses to correct future routing of similar prompts.
     """
     judge_model = get_model(JUDGE_MODEL_ID)
     try:
@@ -62,3 +67,9 @@ def verify_response(request_id: int, prompt: str, candidate_output: str) -> None
 
     if score < ESCALATION_THRESHOLD:
         mark_escalated(request_id, escalated_model_id=judge_model.id, cost_delta=reference.cost_usd)
+        record_classifier_failure(
+            prompt=prompt,
+            original_tier=original_tier,
+            corrected_tier=judge_model.quality_tier.value,
+            quality_score=score,
+        )

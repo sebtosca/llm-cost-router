@@ -53,7 +53,11 @@ def create_completion(
     # always score a perfect match while still costing two extra API calls.
     if model_config.id != JUDGE_MODEL_ID:
         background_tasks.add_task(
-            verify_response, request_id, body.prompt, response.output_text
+            verify_response,
+            request_id,
+            body.prompt,
+            response.output_text,
+            classification.tier.value,
         )
 
     return CompletionResponse(

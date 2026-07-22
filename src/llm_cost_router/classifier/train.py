@@ -19,6 +19,22 @@ def build_feature_matrix(records: list[dict]) -> tuple[list[list[float]], list[i
     return X, y
 
 
+def fit_model(X: list[list[float]], y: list[int]) -> LogisticRegression:
+    model = LogisticRegression(max_iter=1000)
+    model.fit(X, y)
+    return model
+
+
+def evaluate_model(model: LogisticRegression, X_test: list[list[float]], y_test: list[int]) -> dict:
+    predictions = model.predict(X_test)
+    labels = sorted(set(y_test))
+    return {
+        "accuracy": model.score(X_test, y_test),
+        "confusion_matrix": confusion_matrix(y_test, predictions, labels=labels).tolist(),
+        "labels": labels,
+    }
+
+
 def train_and_evaluate(
     records: list[dict], test_size: float = 0.2, random_state: int = 42
 ) -> dict:
@@ -27,20 +43,14 @@ def train_and_evaluate(
         X, y, test_size=test_size, random_state=random_state, stratify=y
     )
 
-    model = LogisticRegression(max_iter=1000)
-    model.fit(X_train, y_train)
-
-    accuracy = model.score(X_test, y_test)
-    predictions = model.predict(X_test)
-    labels = sorted(set(y))
+    model = fit_model(X_train, y_train)
+    eval_result = evaluate_model(model, X_test, y_test)
 
     return {
         "model": model,
-        "accuracy": accuracy,
-        "confusion_matrix": confusion_matrix(y_test, predictions, labels=labels).tolist(),
-        "labels": labels,
         "n_train": len(X_train),
         "n_test": len(X_test),
+        **eval_result,
     }
 
 
