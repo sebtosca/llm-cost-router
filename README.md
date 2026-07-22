@@ -116,6 +116,24 @@ baseline and merged model on the same held-out split, and only swaps in the
 new model file if it doesn't regress. This is manually triggered for now - an
 automated weekly schedule is a follow-up, not built here.
 
+## Docker
+
+```bash
+cp .env.example .env   # fill in real keys, or leave placeholders to smoke-test
+docker compose up --build
+```
+
+```bash
+curl localhost:8000/v1/models
+```
+
+`data/` and `config/` are bind-mounted, so `router.db` and the sklearn model
+persist across container restarts, and `config/routing.yaml` can be edited on
+the host without rebuilding. No separate worker container - verification runs
+as an in-process FastAPI background task, not a real task queue. `.env` is
+optional; the API starts fine without it and only fails at request time if a
+key is missing.
+
 ## Not yet built
 
-docker/docker-compose, load testing.
+Load testing.
