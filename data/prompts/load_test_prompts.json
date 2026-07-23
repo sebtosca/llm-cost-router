@@ -1,0 +1,1970 @@
+[
+  {
+    "id": "lt1",
+    "prompt": "What is the hex code for the color maroon?"
+  },
+  {
+    "id": "lt2",
+    "prompt": "What is the hex code for the color goldenrod?"
+  },
+  {
+    "id": "lt3",
+    "prompt": "Extract the flight number and departure time from this text: Total for customer Maria Lopez comes to $482.10."
+  },
+  {
+    "id": "lt4",
+    "prompt": "What is the two-letter abbreviation for Alabama?"
+  },
+  {
+    "id": "lt5",
+    "prompt": "A hospital administrator is trying to decide between expanding ICU capacity and investing in preventive care programs. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt6",
+    "prompt": "What region of the US is Idaho typically considered part of?"
+  },
+  {
+    "id": "lt7",
+    "prompt": "Summarize the key differences between freelancing and full-time employment in a short paragraph."
+  },
+  {
+    "id": "lt8",
+    "prompt": "What is 45 + 78?"
+  },
+  {
+    "id": "lt9",
+    "prompt": "What is the two-letter abbreviation for Maine?"
+  },
+  {
+    "id": "lt10",
+    "prompt": "List the pros and cons of standardized testing."
+  },
+  {
+    "id": "lt11",
+    "prompt": "Reformat this list into a comma-separated string: apples\nbananas\noranges"
+  },
+  {
+    "id": "lt12",
+    "prompt": "What is the two-letter abbreviation for Idaho?"
+  },
+  {
+    "id": "lt13",
+    "prompt": "Summarize the key differences between server-side rendering and client-side rendering in a short paragraph."
+  },
+  {
+    "id": "lt14",
+    "prompt": "Classify this email as spam or legitimate: \"URGENT: verify your account immediately or it will be suspended today\""
+  },
+  {
+    "id": "lt15",
+    "prompt": "Write a short creative story about two rival chefs forced to run the same food truck for a week, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt16",
+    "prompt": "What is the next leap year after 2024?"
+  },
+  {
+    "id": "lt17",
+    "prompt": "Write a short creative story about a cartographer mapping a city that rearranges its streets every night, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt18",
+    "prompt": "Summarize the following in two sentences:\n\nA manufacturing plant switched to a predictive maintenance system, cutting unplanned downtime by nearly a fifth in its first two quarters of operation."
+  },
+  {
+    "id": "lt19",
+    "prompt": "What is the main takeaway of this passage in one sentence: A city's public library system expanded its hours on weekends after survey data showed strong demand from working families, funded by a reallocation of the parks department budget."
+  },
+  {
+    "id": "lt20",
+    "prompt": "Extract the order number and shipping date from this text: Please send 12 units of the standing desk model."
+  },
+  {
+    "id": "lt21",
+    "prompt": "Compare the trade-offs between Postgres and MongoDB for a content management system. Analyze query flexibility, consistency guarantees, and horizontal scaling step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt22",
+    "prompt": "What region of the US is Alabama typically considered part of?"
+  },
+  {
+    "id": "lt23",
+    "prompt": "Outline the main steps involved in onboarding a new employee."
+  },
+  {
+    "id": "lt24",
+    "prompt": "What is the chemical symbol for carbon?"
+  },
+  {
+    "id": "lt25",
+    "prompt": "Why do social media algorithm changes typically shift how quickly news spreads? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of amplifying misinformation."
+  },
+  {
+    "id": "lt26",
+    "prompt": "Rewrite this sentence to be more formal: hey can u send that file over"
+  },
+  {
+    "id": "lt27",
+    "prompt": "Extract the flight number and departure time from this text: Please send 12 units of the standing desk model."
+  },
+  {
+    "id": "lt28",
+    "prompt": "What is the capital of Maine?"
+  },
+  {
+    "id": "lt29",
+    "prompt": "What region of the US is Vermont typically considered part of?"
+  },
+  {
+    "id": "lt30",
+    "prompt": "Why do urban heat islands typically raise nighttime temperatures in cities? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of increased energy demand during heat waves."
+  },
+  {
+    "id": "lt31",
+    "prompt": "Classify this email as spam or legitimate: \"Subject: You've won a free cruise! Click here to claim your prize now.\""
+  },
+  {
+    "id": "lt32",
+    "prompt": "Design a multi-tenant billing system for a B2B SaaS product with usage-based pricing, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt33",
+    "prompt": "Extract the flight number and departure time from this text: Invoice from Acme Corp is due April 15th."
+  },
+  {
+    "id": "lt34",
+    "prompt": "What currency is used in Egypt?"
+  },
+  {
+    "id": "lt35",
+    "prompt": "Design a notification delivery system for an app needing to reach users across push, email, and SMS reliably, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt36",
+    "prompt": "What is the melting point of mercury in Celsius?"
+  },
+  {
+    "id": "lt37",
+    "prompt": "What is the hex code for the color coral?"
+  },
+  {
+    "id": "lt38",
+    "prompt": "What language is primarily spoken in Japan?"
+  },
+  {
+    "id": "lt39",
+    "prompt": "Extract the product name and quantity from this text: Invoice from Acme Corp is due April 15th."
+  },
+  {
+    "id": "lt40",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"I can't remember my password and the reset email never arrives.\""
+  },
+  {
+    "id": "lt41",
+    "prompt": "A hospital administrator is trying to decide between adopting an AI diagnostic tool immediately and waiting for a longer clinical validation period. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt42",
+    "prompt": "List the pros and cons of electric vehicles."
+  },
+  {
+    "id": "lt43",
+    "prompt": "What language is primarily spoken in Vietnam?"
+  },
+  {
+    "id": "lt44",
+    "prompt": "Design a rate limiter for a public API with millions of daily requests, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt45",
+    "prompt": "Given this data, identify the trend: Daily active users: 3200, 3400, 3100, 3900, 4200, 4600"
+  },
+  {
+    "id": "lt46",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Great value for the price, though the fabric pilled after a few washes.\""
+  },
+  {
+    "id": "lt47",
+    "prompt": "Translate the word 'house' into French."
+  },
+  {
+    "id": "lt48",
+    "prompt": "Extract the phone number from this text: Contact Jane Doe at jane.doe@example.com or 555-123-4567 for support."
+  },
+  {
+    "id": "lt49",
+    "prompt": "Compare the trade-offs between server-rendered pages and a single-page application for a content-heavy marketing site. Analyze SEO, initial load time, and interactivity step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt50",
+    "prompt": "Give a one-sentence example of closure."
+  },
+  {
+    "id": "lt51",
+    "prompt": "What is the boiling point of nitrogen in Celsius?"
+  },
+  {
+    "id": "lt52",
+    "prompt": "What year did the invention of the telephone happen?"
+  },
+  {
+    "id": "lt53",
+    "prompt": "List the pros and cons of nuclear energy."
+  },
+  {
+    "id": "lt54",
+    "prompt": "What currency is used in Poland?"
+  },
+  {
+    "id": "lt55",
+    "prompt": "What is 20% of 350?"
+  },
+  {
+    "id": "lt56",
+    "prompt": "Why do droughts typically reduce hydropower output? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of cascading into higher electricity prices."
+  },
+  {
+    "id": "lt57",
+    "prompt": "What is the capital of Arizona?"
+  },
+  {
+    "id": "lt58",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"The room smelled musty and the wifi barely worked the whole stay.\""
+  },
+  {
+    "id": "lt59",
+    "prompt": "Translate the word 'house' into Spanish."
+  },
+  {
+    "id": "lt60",
+    "prompt": "Extract the date from this text: Your order #48213 was placed on 2026-03-11 and will ship within 3 days."
+  },
+  {
+    "id": "lt61",
+    "prompt": "Design a log aggregation pipeline for a fleet of thousands of IoT devices, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt62",
+    "prompt": "What language is primarily spoken in Kenya?"
+  },
+  {
+    "id": "lt63",
+    "prompt": "What is the melting point of ethanol in Celsius?"
+  },
+  {
+    "id": "lt64",
+    "prompt": "Reformat this list into a comma-separated string: red\nblue\ngreen"
+  },
+  {
+    "id": "lt65",
+    "prompt": "What is 91 divided by 7?"
+  },
+  {
+    "id": "lt66",
+    "prompt": "What is the capital of France?"
+  },
+  {
+    "id": "lt67",
+    "prompt": "What is the capital of Canada?"
+  },
+  {
+    "id": "lt68",
+    "prompt": "Extract the flight number and departure time from this text: Flight UA2291 departs at 6:45am from gate B12."
+  },
+  {
+    "id": "lt69",
+    "prompt": "What region of the US is Utah typically considered part of?"
+  },
+  {
+    "id": "lt70",
+    "prompt": "Summarize the following in two sentences:\n\nThe regional transit authority announced a pilot program offering free weekend bus service in an effort to reduce weekend traffic congestion downtown, funded by a one-year state grant."
+  },
+  {
+    "id": "lt71",
+    "prompt": "Translate the word 'garden' into German."
+  },
+  {
+    "id": "lt72",
+    "prompt": "What is 7 times 14?"
+  },
+  {
+    "id": "lt73",
+    "prompt": "What is the two-letter abbreviation for Wisconsin?"
+  },
+  {
+    "id": "lt74",
+    "prompt": "Explain 'thread' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt75",
+    "prompt": "Convert 2 gallons to liters."
+  },
+  {
+    "id": "lt76",
+    "prompt": "Given this data, identify the trend: Support ticket response time (hours): 6.5, 5.9, 5.2, 4.8, 4.1"
+  },
+  {
+    "id": "lt77",
+    "prompt": "Convert 50 meters to feet."
+  },
+  {
+    "id": "lt78",
+    "prompt": "Translate the word 'mountain' into German."
+  },
+  {
+    "id": "lt79",
+    "prompt": "Compare the trade-offs between a fixed-rate mortgage and an adjustable-rate mortgage for a buyer planning to stay 10+ years. Analyze interest rate risk, monthly payment stability, and total interest paid step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt80",
+    "prompt": "Rewrite this sentence in future tense: She finishes her homework."
+  },
+  {
+    "id": "lt81",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"The app keeps crashing whenever I open the settings page.\""
+  },
+  {
+    "id": "lt82",
+    "prompt": "Who is most associated with the Moon landing?"
+  },
+  {
+    "id": "lt83",
+    "prompt": "Give a one-sentence example of checksum."
+  },
+  {
+    "id": "lt84",
+    "prompt": "Outline the main steps involved in planning a small conference."
+  },
+  {
+    "id": "lt85",
+    "prompt": "What is the capital of Vietnam?"
+  },
+  {
+    "id": "lt86",
+    "prompt": "What is the main takeaway of this passage in one sentence: A local school district shifted to a four-day instructional week, citing budget pressures, and is now tracking whether student attendance and test scores hold steady over the year."
+  },
+  {
+    "id": "lt87",
+    "prompt": "Why do vaccination campaigns typically reduce disease transmission? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of moving too quickly without adequate safety monitoring."
+  },
+  {
+    "id": "lt88",
+    "prompt": "Outline the main steps involved in migrating a production database with zero downtime."
+  },
+  {
+    "id": "lt89",
+    "prompt": "Define the term 'variable' in one sentence."
+  },
+  {
+    "id": "lt90",
+    "prompt": "Design a caching layer for a read-heavy news website with spiky traffic, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt91",
+    "prompt": "What is the hex code for the color teal?"
+  },
+  {
+    "id": "lt92",
+    "prompt": "Summarize the key differences between a paper planner and a digital calendar app in a short paragraph."
+  },
+  {
+    "id": "lt93",
+    "prompt": "Rewrite this sentence in past tense: I walk to the store every morning."
+  },
+  {
+    "id": "lt94",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"My password reset email never arrived.\""
+  },
+  {
+    "id": "lt95",
+    "prompt": "Give a one-sentence example of compiler."
+  },
+  {
+    "id": "lt96",
+    "prompt": "Convert 200 CAD to USD (approximate)."
+  },
+  {
+    "id": "lt97",
+    "prompt": "List the pros and cons of requiring code review approval from two engineers instead of one."
+  },
+  {
+    "id": "lt98",
+    "prompt": "Extract the date from this text: Contact Jane Doe at jane.doe@example.com or 555-123-4567 for support."
+  },
+  {
+    "id": "lt99",
+    "prompt": "What is the capital of Peru?"
+  },
+  {
+    "id": "lt100",
+    "prompt": "What is the hex code for the color orchid?"
+  },
+  {
+    "id": "lt101",
+    "prompt": "Convert 100 Fahrenheit to Celsius."
+  },
+  {
+    "id": "lt102",
+    "prompt": "Extract the sender and due date from this text: Order #A4821 will ship on March 3rd."
+  },
+  {
+    "id": "lt103",
+    "prompt": "What is the chemical symbol for sodium?"
+  },
+  {
+    "id": "lt104",
+    "prompt": "Summarize the following in two sentences:\n\nA regional grocery chain began piloting reusable produce bags at checkout, reporting a modest drop in single-use plastic bag purchases within the first month, though customer feedback was mixed."
+  },
+  {
+    "id": "lt105",
+    "prompt": "What is the population of Poland?"
+  },
+  {
+    "id": "lt106",
+    "prompt": "Extract the sender and due date from this text: Flight UA2291 departs at 6:45am from gate B12."
+  },
+  {
+    "id": "lt107",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"The food arrived cold and the waiter was rude, but the manager comped our dessert.\""
+  },
+  {
+    "id": "lt108",
+    "prompt": "Outline the main steps involved in filing a small business tax return."
+  },
+  {
+    "id": "lt109",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"The export button on the reports page does nothing when clicked.\""
+  },
+  {
+    "id": "lt110",
+    "prompt": "Write a persuasive essay arguing that software companies should be required to disclose known security vulnerabilities within 30 days, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt111",
+    "prompt": "Reformat this list into a comma-separated string: cats\ndogs\nbirds"
+  },
+  {
+    "id": "lt112",
+    "prompt": "Explain 'hash map' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt113",
+    "prompt": "What is Kansas best known for?"
+  },
+  {
+    "id": "lt114",
+    "prompt": "What is Ohio best known for?"
+  },
+  {
+    "id": "lt115",
+    "prompt": "What is the capital of Colorado?"
+  },
+  {
+    "id": "lt116",
+    "prompt": "What is the population of France?"
+  },
+  {
+    "id": "lt117",
+    "prompt": "List the pros and cons of universal basic income."
+  },
+  {
+    "id": "lt118",
+    "prompt": "Explain 'API' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt119",
+    "prompt": "What is the melting point of nitrogen in Celsius?"
+  },
+  {
+    "id": "lt120",
+    "prompt": "Outline the main steps involved in renewing a passport."
+  },
+  {
+    "id": "lt121",
+    "prompt": "Why do interest rate cuts typically stimulate short-term borrowing? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of reigniting inflation."
+  },
+  {
+    "id": "lt122",
+    "prompt": "Outline the main steps involved in running a quarterly performance review cycle."
+  },
+  {
+    "id": "lt123",
+    "prompt": "Translate the word 'bridge' into French."
+  },
+  {
+    "id": "lt124",
+    "prompt": "Given this data, identify the trend: Monthly signups: 120, 145, 160, 210, 205, 260"
+  },
+  {
+    "id": "lt125",
+    "prompt": "Given this data, identify the trend: Warehouse shipping errors fell from 5% to 0.8% after the new barcode scanning process was introduced."
+  },
+  {
+    "id": "lt126",
+    "prompt": "How many days are in the month of February during a non-leap year?"
+  },
+  {
+    "id": "lt127",
+    "prompt": "What is Nevada best known for?"
+  },
+  {
+    "id": "lt128",
+    "prompt": "Define the term 'garbage collection' in one sentence."
+  },
+  {
+    "id": "lt129",
+    "prompt": "Extract the email address from this text: Reach the office at info@acme.co or call 555-987-6543 between 9 and 5."
+  },
+  {
+    "id": "lt130",
+    "prompt": "Define the term 'database index' in one sentence."
+  },
+  {
+    "id": "lt131",
+    "prompt": "Compare the trade-offs between a relational schema and a graph database for a social network's friend-recommendation feature. Analyze query flexibility, write throughput, and operational complexity step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt132",
+    "prompt": "What is the atomic number of helium?"
+  },
+  {
+    "id": "lt133",
+    "prompt": "Write a persuasive essay arguing that remote work should be a legal right for eligible jobs, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt134",
+    "prompt": "Define the term 'compiler' in one sentence."
+  },
+  {
+    "id": "lt135",
+    "prompt": "What is the two-letter abbreviation for Wyoming?"
+  },
+  {
+    "id": "lt136",
+    "prompt": "What currency is used in Norway?"
+  },
+  {
+    "id": "lt137",
+    "prompt": "What is the two-letter abbreviation for Oregon?"
+  },
+  {
+    "id": "lt138",
+    "prompt": "Give a one-sentence example of API."
+  },
+  {
+    "id": "lt139",
+    "prompt": "Outline the main steps involved in publishing a mobile app update."
+  },
+  {
+    "id": "lt140",
+    "prompt": "What is the square root of 144?"
+  },
+  {
+    "id": "lt141",
+    "prompt": "Extract the order number and shipping date from this text: Order #A4821 will ship on March 3rd."
+  },
+  {
+    "id": "lt142",
+    "prompt": "Reformat this list into a comma-separated string: north\nsouth\neast"
+  },
+  {
+    "id": "lt143",
+    "prompt": "Write a persuasive essay arguing that companies should publish their gender pay gap data annually, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt144",
+    "prompt": "What is the capital of Kenya?"
+  },
+  {
+    "id": "lt145",
+    "prompt": "Extract the customer name and total amount from this text: Flight UA2291 departs at 6:45am from gate B12."
+  },
+  {
+    "id": "lt146",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"The laptop runs quiet and the battery easily lasts a full workday.\""
+  },
+  {
+    "id": "lt147",
+    "prompt": "What is the capital of Idaho?"
+  },
+  {
+    "id": "lt148",
+    "prompt": "Why do quantitative easing typically stimulate economic growth? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of inflating asset bubbles."
+  },
+  {
+    "id": "lt149",
+    "prompt": "Write a short creative story about a gardener whose plants only grow when she tells them the truth, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt150",
+    "prompt": "What is the hex code for the color chartreuse?"
+  },
+  {
+    "id": "lt151",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"I need to update the mailing address on my account.\""
+  },
+  {
+    "id": "lt152",
+    "prompt": "Translate the word 'mountain' into French."
+  },
+  {
+    "id": "lt153",
+    "prompt": "Extract the order number and shipping date from this text: Total for customer Maria Lopez comes to $482.10."
+  },
+  {
+    "id": "lt154",
+    "prompt": "Rewrite this sentence in third person: I think this plan will work."
+  },
+  {
+    "id": "lt155",
+    "prompt": "Given this data, identify the trend: Website conversion rate dropped from 4.2% to 2.1% after the checkout flow was redesigned."
+  },
+  {
+    "id": "lt156",
+    "prompt": "What is the melting point of water in Celsius?"
+  },
+  {
+    "id": "lt157",
+    "prompt": "Explain 'cache' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt158",
+    "prompt": "Summarize the key differences between SQL databases and NoSQL databases in a short paragraph."
+  },
+  {
+    "id": "lt159",
+    "prompt": "Extract the email address from this text: Your order #48213 was placed on 2026-03-11 and will ship within 3 days."
+  },
+  {
+    "id": "lt160",
+    "prompt": "What currency is used in Brazil?"
+  },
+  {
+    "id": "lt161",
+    "prompt": "What region of the US is Wyoming typically considered part of?"
+  },
+  {
+    "id": "lt162",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"The app crashes every time I try to upload a photo.\""
+  },
+  {
+    "id": "lt163",
+    "prompt": "What is Colorado best known for?"
+  },
+  {
+    "id": "lt164",
+    "prompt": "What currency is used in Vietnam?"
+  },
+  {
+    "id": "lt165",
+    "prompt": "What region of the US is Ohio typically considered part of?"
+  },
+  {
+    "id": "lt166",
+    "prompt": "Write a short creative story about a retired astronaut who receives a radio signal from their old mission, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt167",
+    "prompt": "Summarize the key differences between agile sprints and kanban-style continuous flow in a short paragraph."
+  },
+  {
+    "id": "lt168",
+    "prompt": "A hiring manager is trying to decide between promoting a high-performing but disruptive employee and hiring a less experienced but more collaborative candidate. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt169",
+    "prompt": "Write a persuasive essay arguing that all university degrees should be free, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt170",
+    "prompt": "Define the term 'cache' in one sentence."
+  },
+  {
+    "id": "lt171",
+    "prompt": "Convert 120 USD to INR (approximate)."
+  },
+  {
+    "id": "lt172",
+    "prompt": "Explain 'checksum' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt173",
+    "prompt": "What is the chemical symbol for oxygen?"
+  },
+  {
+    "id": "lt174",
+    "prompt": "Extract the phone number from this text: Your order #48213 was placed on 2026-03-11 and will ship within 3 days."
+  },
+  {
+    "id": "lt175",
+    "prompt": "Reformat this list into a comma-separated string: Monday\nTuesday\nWednesday"
+  },
+  {
+    "id": "lt176",
+    "prompt": "What language is primarily spoken in Canada?"
+  },
+  {
+    "id": "lt177",
+    "prompt": "What is the hex code for the color crimson?"
+  },
+  {
+    "id": "lt178",
+    "prompt": "Translate the word 'garden' into French."
+  },
+  {
+    "id": "lt179",
+    "prompt": "What currency is used in France?"
+  },
+  {
+    "id": "lt180",
+    "prompt": "Classify this email as spam or legitimate: \"Subject: URGENT - verify your account within 24 hours or lose access.\""
+  },
+  {
+    "id": "lt181",
+    "prompt": "What region of the US is Oregon typically considered part of?"
+  },
+  {
+    "id": "lt182",
+    "prompt": "Outline the main steps involved in setting up a home wifi network."
+  },
+  {
+    "id": "lt183",
+    "prompt": "List the pros and cons of remote work."
+  },
+  {
+    "id": "lt184",
+    "prompt": "Extract the order number and shipping date from this text: Invoice from Acme Corp is due April 15th."
+  },
+  {
+    "id": "lt185",
+    "prompt": "What currency is used in Japan?"
+  },
+  {
+    "id": "lt186",
+    "prompt": "What is the capital of Wisconsin?"
+  },
+  {
+    "id": "lt187",
+    "prompt": "Write a short creative story about a clockmaker who realizes one of their clocks runs a minute into the future, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt188",
+    "prompt": "Extract the sender and due date from this text: Total for customer Maria Lopez comes to $482.10."
+  },
+  {
+    "id": "lt189",
+    "prompt": "Convert 50 GBP to USD (approximate)."
+  },
+  {
+    "id": "lt190",
+    "prompt": "What is the chemical symbol for helium?"
+  },
+  {
+    "id": "lt191",
+    "prompt": "What is 250 divided by 5?"
+  },
+  {
+    "id": "lt192",
+    "prompt": "Convert 100 USD to EUR (approximate)."
+  },
+  {
+    "id": "lt193",
+    "prompt": "What region of the US is Delaware typically considered part of?"
+  },
+  {
+    "id": "lt194",
+    "prompt": "Define the term 'recursion' in one sentence."
+  },
+  {
+    "id": "lt195",
+    "prompt": "Extract the product name and quantity from this text: Order #A4821 will ship on March 3rd."
+  },
+  {
+    "id": "lt196",
+    "prompt": "What region of the US is Arizona typically considered part of?"
+  },
+  {
+    "id": "lt197",
+    "prompt": "Given this data, identify the trend: Customer churn increased from 3% to 9% monthly in the two months following the price increase."
+  },
+  {
+    "id": "lt198",
+    "prompt": "What region of the US is Nevada typically considered part of?"
+  },
+  {
+    "id": "lt199",
+    "prompt": "Compare the trade-offs between AWS and GCP for hosting a data pipeline. Analyze cost, vendor lock-in, and operational complexity step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt200",
+    "prompt": "Summarize the key differences between carpooling and public transit in a short paragraph."
+  },
+  {
+    "id": "lt201",
+    "prompt": "Summarize the following article in two sentences:\n\nContext: Researchers announced a new battery chemistry this week that reportedly charges to 80% capacity in under ten minutes while using significantly less cobalt than current designs. The team cautions that manufacturing at scale is still years away and that lab results often don't translate directly to commercial products, but several automakers have already expressed interest in licensing the technology for future vehicle lines."
+  },
+  {
+    "id": "lt202",
+    "prompt": "What region of the US is Kansas typically considered part of?"
+  },
+  {
+    "id": "lt203",
+    "prompt": "A startup founder is trying to decide between raising a large funding round with heavy dilution and bootstrapping slower but retaining control. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt204",
+    "prompt": "What is the capital of Ohio?"
+  },
+  {
+    "id": "lt205",
+    "prompt": "What is the population of Peru?"
+  },
+  {
+    "id": "lt206",
+    "prompt": "Translate the word 'bridge' into German."
+  },
+  {
+    "id": "lt207",
+    "prompt": "Write a persuasive essay arguing that public libraries should expand into offering tool and equipment lending, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt208",
+    "prompt": "What is the atomic number of carbon?"
+  },
+  {
+    "id": "lt209",
+    "prompt": "Why do minimum wage increases typically raise worker income? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of reducing entry-level hiring in small businesses."
+  },
+  {
+    "id": "lt210",
+    "prompt": "A software team lead is trying to decide between shipping a feature with known minor bugs to hit a deadline and delaying the release to fix them first. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt211",
+    "prompt": "Convert 75 USD to JPY (approximate)."
+  },
+  {
+    "id": "lt212",
+    "prompt": "Explain 'middleware' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt213",
+    "prompt": "What is Arizona best known for?"
+  },
+  {
+    "id": "lt214",
+    "prompt": "Write a short creative story about a librarian who discovers a book that rewrites itself overnight, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt215",
+    "prompt": "A judge is trying to decide between sentencing based on strict statutory guidelines and weighing mitigating personal circumstances. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt216",
+    "prompt": "What is the ISO 8601 format for representing dates?"
+  },
+  {
+    "id": "lt217",
+    "prompt": "Give a one-sentence example of recursion."
+  },
+  {
+    "id": "lt218",
+    "prompt": "Summarize the key differences between public cloud hosting and on-premise servers in a short paragraph."
+  },
+  {
+    "id": "lt219",
+    "prompt": "What is the atomic number of sodium?"
+  },
+  {
+    "id": "lt220",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"Notifications stopped working after the last app update.\""
+  },
+  {
+    "id": "lt221",
+    "prompt": "List the pros and cons of outsourcing customer support."
+  },
+  {
+    "id": "lt222",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"I want to downgrade my plan before the next billing cycle.\""
+  },
+  {
+    "id": "lt223",
+    "prompt": "Design a search index for an e-commerce site with a large, frequently updated catalog, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt224",
+    "prompt": "What is the capital of Alabama?"
+  },
+  {
+    "id": "lt225",
+    "prompt": "What is the main takeaway of this passage in one sentence: Researchers observed that a coastal wetland restoration project increased local bird species counts by nearly a third within three years, though invasive plant species remain a persistent challenge."
+  },
+  {
+    "id": "lt226",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Decent quality but overpriced compared to similar products.\""
+  },
+  {
+    "id": "lt227",
+    "prompt": "Compare the trade-offs between a message queue and direct synchronous API calls for an order-processing pipeline. Analyze reliability, latency, and failure isolation step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt228",
+    "prompt": "What region of the US is Montana typically considered part of?"
+  },
+  {
+    "id": "lt229",
+    "prompt": "Summarize the key differences between hardcover books and e-readers in a short paragraph."
+  },
+  {
+    "id": "lt230",
+    "prompt": "Extract the sender and due date from this text: Please send 12 units of the standing desk model."
+  },
+  {
+    "id": "lt231",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"The instructor was engaging and answered every question patiently.\""
+  },
+  {
+    "id": "lt232",
+    "prompt": "Design a video transcoding service for a platform handling variable, bursty upload traffic, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt233",
+    "prompt": "What is the hex code for the color olive?"
+  },
+  {
+    "id": "lt234",
+    "prompt": "Outline the main steps involved in migrating a database to a new server."
+  },
+  {
+    "id": "lt235",
+    "prompt": "Why do urban rewilding projects typically improve biodiversity? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of creating conflicts with existing land use and residents."
+  },
+  {
+    "id": "lt236",
+    "prompt": "Convert 90 USD to CHF (approximate)."
+  },
+  {
+    "id": "lt237",
+    "prompt": "What is the boiling point of acetone in Celsius?"
+  },
+  {
+    "id": "lt238",
+    "prompt": "Give a one-sentence example of database index."
+  },
+  {
+    "id": "lt239",
+    "prompt": "What is the main takeaway of this passage in one sentence: The regional transit authority announced a pilot program offering free weekend bus service in an effort to reduce weekend traffic congestion downtown, funded by a one-year state grant."
+  },
+  {
+    "id": "lt240",
+    "prompt": "Explain 'variable' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt241",
+    "prompt": "List the pros and cons of open-plan offices."
+  },
+  {
+    "id": "lt242",
+    "prompt": "Define the term 'checksum' in one sentence."
+  },
+  {
+    "id": "lt243",
+    "prompt": "Classify this email as spam or legitimate: \"Congratulations! You've won a $1000 gift card, click here to claim now!!!\""
+  },
+  {
+    "id": "lt244",
+    "prompt": "A city planner is trying to decide between approving a new highway that cuts commute times and preserving a historic neighborhood it would displace. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt245",
+    "prompt": "Given this data, identify the trend: Quarterly churn rate: 5.2%, 4.8%, 4.9%, 4.1%"
+  },
+  {
+    "id": "lt246",
+    "prompt": "What language is primarily spoken in Peru?"
+  },
+  {
+    "id": "lt247",
+    "prompt": "What is the melting point of acetone in Celsius?"
+  },
+  {
+    "id": "lt248",
+    "prompt": "Outline the main steps involved in publishing a package to a public package registry."
+  },
+  {
+    "id": "lt249",
+    "prompt": "What is Maine best known for?"
+  },
+  {
+    "id": "lt250",
+    "prompt": "Give a one-sentence example of hash map."
+  },
+  {
+    "id": "lt251",
+    "prompt": "Explain 'compiler' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt252",
+    "prompt": "What is the two-letter abbreviation for Vermont?"
+  },
+  {
+    "id": "lt253",
+    "prompt": "Why do interest rate hikes typically slow down inflation? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of raising rates too aggressively and triggering a recession."
+  },
+  {
+    "id": "lt254",
+    "prompt": "What language is primarily spoken in Brazil?"
+  },
+  {
+    "id": "lt255",
+    "prompt": "Extract the customer name and total amount from this text: Order #A4821 will ship on March 3rd."
+  },
+  {
+    "id": "lt256",
+    "prompt": "What is the main takeaway of this passage in one sentence: A new study found that hybrid work schedules led to a 12% increase in self-reported employee satisfaction, though managers noted a slight drop in cross-team collaboration during the first two quarters."
+  },
+  {
+    "id": "lt257",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Customer support was unhelpful and took three days to respond to a simple question.\""
+  },
+  {
+    "id": "lt258",
+    "prompt": "How many seconds are in an hour?"
+  },
+  {
+    "id": "lt259",
+    "prompt": "What currency is used in Peru?"
+  },
+  {
+    "id": "lt260",
+    "prompt": "What region of the US is Wisconsin typically considered part of?"
+  },
+  {
+    "id": "lt261",
+    "prompt": "A nonprofit director is trying to decide between spending more on direct aid now and investing in long-term capacity building. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt262",
+    "prompt": "Extract the product name and quantity from this text: Flight UA2291 departs at 6:45am from gate B12."
+  },
+  {
+    "id": "lt263",
+    "prompt": "What is 500 minus 245?"
+  },
+  {
+    "id": "lt264",
+    "prompt": "Outline the main steps involved in onboarding a new employee at a mid-sized company."
+  },
+  {
+    "id": "lt265",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"It was fine, nothing special, but nothing wrong either.\""
+  },
+  {
+    "id": "lt266",
+    "prompt": "Summarize the key differences between a savings account and a certificate of deposit in a short paragraph."
+  },
+  {
+    "id": "lt267",
+    "prompt": "What region of the US is Georgia typically considered part of?"
+  },
+  {
+    "id": "lt268",
+    "prompt": "What is the capital of Georgia?"
+  },
+  {
+    "id": "lt269",
+    "prompt": "List the pros and cons of adopting a four-day work week company-wide."
+  },
+  {
+    "id": "lt270",
+    "prompt": "What is the capital of Montana?"
+  },
+  {
+    "id": "lt271",
+    "prompt": "Explain 'interpreter' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt272",
+    "prompt": "Classify this email as spam or legitimate: \"Hi team, attaching the updated slide deck for tomorrow's board meeting.\""
+  },
+  {
+    "id": "lt273",
+    "prompt": "What is the hex code for the color periwinkle?"
+  },
+  {
+    "id": "lt274",
+    "prompt": "Explain 'garbage collection' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt275",
+    "prompt": "What is the hex code for the color burnt sienna?"
+  },
+  {
+    "id": "lt276",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"Can you tell me when my next invoice is due?\""
+  },
+  {
+    "id": "lt277",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Absolutely loved the service, will be coming back every week!\""
+  },
+  {
+    "id": "lt278",
+    "prompt": "What is the boiling point of water in Celsius?"
+  },
+  {
+    "id": "lt279",
+    "prompt": "Classify this email as spam or legitimate: \"Subject: Reminder - your dentist appointment is tomorrow at 2pm.\""
+  },
+  {
+    "id": "lt280",
+    "prompt": "Rewrite this sentence in passive voice: The dog chased the cat."
+  },
+  {
+    "id": "lt281",
+    "prompt": "Convert 5 kilograms to pounds."
+  },
+  {
+    "id": "lt282",
+    "prompt": "A startup founder is trying to decide between raising venture capital for faster growth and staying bootstrapped for more control. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt283",
+    "prompt": "What language is primarily spoken in France?"
+  },
+  {
+    "id": "lt284",
+    "prompt": "Design a notification system for a mobile app sending real-time alerts to users, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt285",
+    "prompt": "Explain 'algorithm' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt286",
+    "prompt": "What is the boiling point of mercury in Celsius?"
+  },
+  {
+    "id": "lt287",
+    "prompt": "Classify this email as spam or legitimate: \"Subject: Team standup notes from yesterday's meeting.\""
+  },
+  {
+    "id": "lt288",
+    "prompt": "Translate the word 'ocean' into German."
+  },
+  {
+    "id": "lt289",
+    "prompt": "What is the Unix epoch start date?"
+  },
+  {
+    "id": "lt290",
+    "prompt": "Why do carbon taxes typically reduce emissions? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of imposing them without offsetting costs for low-income households."
+  },
+  {
+    "id": "lt291",
+    "prompt": "Summarize the following article in two sentences:\n\nContext: The city council voted 5-2 on Tuesday to approve a new zoning ordinance that will allow mixed-use development in the downtown corridor for the first time in twenty years. Supporters say the change will bring much-needed housing and foot traffic to a struggling business district, while critics worry about parking shortages and rising rents displacing long-time residents. The ordinance takes effect in 90 days, with a public review scheduled after the first year."
+  },
+  {
+    "id": "lt292",
+    "prompt": "Write a short creative story about a lighthouse keeper who discovers a message in a bottle that predicts the future, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt293",
+    "prompt": "Identify the main topic of this paragraph in one sentence: Researchers announced a new battery chemistry this week that reportedly charges to 80% capacity in under ten minutes while using significantly less cobalt than current designs. The team cautions that manufacturing at scale is still years away and that lab results often don't translate directly to commercial products, but several automakers have already expressed interest in licensing the technology for future vehicle lines."
+  },
+  {
+    "id": "lt294",
+    "prompt": "Compare the trade-offs between in-house development and a third-party SaaS tool for a mid-size company's CRM needs. Analyze customization, total cost of ownership, and vendor lock-in step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt295",
+    "prompt": "Outline the main steps involved in brewing cold brew coffee."
+  },
+  {
+    "id": "lt296",
+    "prompt": "What is the hex code for the color navy?"
+  },
+  {
+    "id": "lt297",
+    "prompt": "Give a one-sentence example of thread."
+  },
+  {
+    "id": "lt298",
+    "prompt": "What is the two-letter abbreviation for Georgia?"
+  },
+  {
+    "id": "lt299",
+    "prompt": "Translate the word 'river' into French."
+  },
+  {
+    "id": "lt300",
+    "prompt": "Given this data, identify the trend: Daily active users have stayed flat around 50,000 for the past three months despite two feature launches."
+  },
+  {
+    "id": "lt301",
+    "prompt": "Classify this email as spam or legitimate: \"Limited time offer - 90% off all products, act now before it's gone!\""
+  },
+  {
+    "id": "lt302",
+    "prompt": "Give a one-sentence example of middleware."
+  },
+  {
+    "id": "lt303",
+    "prompt": "Summarize the following in two sentences:\n\nA youth sports league reported record enrollment this spring, crediting a new scholarship fund that covers registration fees for low-income families in the district."
+  },
+  {
+    "id": "lt304",
+    "prompt": "List the pros and cons of switching a team from Jira to a lightweight kanban tool."
+  },
+  {
+    "id": "lt305",
+    "prompt": "How many days are there in a leap year?"
+  },
+  {
+    "id": "lt306",
+    "prompt": "Extract the phone number from this text: Reach the office at info@acme.co or call 555-987-6543 between 9 and 5."
+  },
+  {
+    "id": "lt307",
+    "prompt": "What region of the US is Colorado typically considered part of?"
+  },
+  {
+    "id": "lt308",
+    "prompt": "Translate the word 'ocean' into Spanish."
+  },
+  {
+    "id": "lt309",
+    "prompt": "What is the population of Canada?"
+  },
+  {
+    "id": "lt310",
+    "prompt": "Compare the trade-offs between Rust and Go for a high-throughput network service. Analyze memory safety, developer velocity, and concurrency model step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt311",
+    "prompt": "Who is most associated with the first Olympics?"
+  },
+  {
+    "id": "lt312",
+    "prompt": "What is the capital of Utah?"
+  },
+  {
+    "id": "lt313",
+    "prompt": "Extract the sender and due date from this text: Invoice from Acme Corp is due April 15th."
+  },
+  {
+    "id": "lt314",
+    "prompt": "Write a short creative story about a librarian who discovers a book that rewrites itself based on the reader's regrets, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt315",
+    "prompt": "What is the population of Brazil?"
+  },
+  {
+    "id": "lt316",
+    "prompt": "Write a persuasive essay arguing that companies should be required to offer a four-day work week, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt317",
+    "prompt": "What year did the Moon landing happen?"
+  },
+  {
+    "id": "lt318",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"My account was locked after I entered the wrong password twice.\""
+  },
+  {
+    "id": "lt319",
+    "prompt": "What is 63 + 89?"
+  },
+  {
+    "id": "lt320",
+    "prompt": "What is Georgia best known for?"
+  },
+  {
+    "id": "lt321",
+    "prompt": "Extract the order number from this text: Reach the office at info@acme.co or call 555-987-6543 between 9 and 5."
+  },
+  {
+    "id": "lt322",
+    "prompt": "Write a persuasive essay arguing that AI-generated content should always be labeled as such, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt323",
+    "prompt": "Classify this email as spam or legitimate: \"Subject: Your invoice #4521 from Acme Consulting is attached.\""
+  },
+  {
+    "id": "lt324",
+    "prompt": "Explain 'database index' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt325",
+    "prompt": "Design a recommendation engine for an e-commerce platform with rapidly changing inventory, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt326",
+    "prompt": "List the pros and cons of genetically modified crops."
+  },
+  {
+    "id": "lt327",
+    "prompt": "Extract the product name and quantity from this text: Total for customer Maria Lopez comes to $482.10."
+  },
+  {
+    "id": "lt328",
+    "prompt": "Design a search indexing pipeline for a marketplace with constantly updated listings, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt329",
+    "prompt": "Translate the word 'bridge' into Spanish."
+  },
+  {
+    "id": "lt330",
+    "prompt": "A product manager is trying to decide between shipping a feature quickly with technical debt and delaying launch to build it properly. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt331",
+    "prompt": "What is the capital of Brazil?"
+  },
+  {
+    "id": "lt332",
+    "prompt": "Explain 'closure' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt333",
+    "prompt": "Define the term 'thread' in one sentence."
+  },
+  {
+    "id": "lt334",
+    "prompt": "Compare the trade-offs between a native mobile app and a cross-platform framework for a startup building its first mobile product. Analyze development speed, performance, and platform-specific features step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt335",
+    "prompt": "What is the population of Egypt?"
+  },
+  {
+    "id": "lt336",
+    "prompt": "Identify the main topic of this paragraph in one sentence: The city council voted 5-2 on Tuesday to approve a new zoning ordinance that will allow mixed-use development in the downtown corridor for the first time in twenty years. Supporters say the change will bring much-needed housing and foot traffic to a struggling business district, while critics worry about parking shortages and rising rents displacing long-time residents. The ordinance takes effect in 90 days, with a public review scheduled after the first year."
+  },
+  {
+    "id": "lt337",
+    "prompt": "What is the capital of Kansas?"
+  },
+  {
+    "id": "lt338",
+    "prompt": "Write a persuasive essay arguing that all new commercial buildings should be required to generate their own energy, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt339",
+    "prompt": "Summarize the following in two sentences:\n\nResearchers observed that a coastal wetland restoration project increased local bird species counts by nearly a third within three years, though invasive plant species remain a persistent challenge."
+  },
+  {
+    "id": "lt340",
+    "prompt": "Write a short creative story about a clockmaker who finds a watch that runs backward during thunderstorms, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt341",
+    "prompt": "Summarize the following in two sentences:\n\nA local school district shifted to a four-day instructional week, citing budget pressures, and is now tracking whether student attendance and test scores hold steady over the year."
+  },
+  {
+    "id": "lt342",
+    "prompt": "How many weeks are there in a standard year?"
+  },
+  {
+    "id": "lt343",
+    "prompt": "Compare the trade-offs between a relational database and a document store for a high-write telemetry system. Analyze latency, consistency, and schema flexibility step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt344",
+    "prompt": "Given this data, identify the trend: Average order value: $42, $45, $47, $44, $51, $55"
+  },
+  {
+    "id": "lt345",
+    "prompt": "Why do algorithmic content recommendation typically increase engagement? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of reinforcing filter bubbles and misinformation."
+  },
+  {
+    "id": "lt346",
+    "prompt": "Extract the order number from this text: Contact Jane Doe at jane.doe@example.com or 555-123-4567 for support."
+  },
+  {
+    "id": "lt347",
+    "prompt": "Extract the customer name and total amount from this text: Invoice from Acme Corp is due April 15th."
+  },
+  {
+    "id": "lt348",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Customer support was unhelpful and kept transferring my call.\""
+  },
+  {
+    "id": "lt349",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Instructions were confusing and one of the parts arrived missing from the box.\""
+  },
+  {
+    "id": "lt350",
+    "prompt": "What is Montana best known for?"
+  },
+  {
+    "id": "lt351",
+    "prompt": "Who is most associated with the invention of the telephone?"
+  },
+  {
+    "id": "lt352",
+    "prompt": "Define the term 'API' in one sentence."
+  },
+  {
+    "id": "lt353",
+    "prompt": "Write a persuasive essay arguing that social media platforms should verify the identity of all users, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt354",
+    "prompt": "What is the capital of Norway?"
+  },
+  {
+    "id": "lt355",
+    "prompt": "What is Vermont best known for?"
+  },
+  {
+    "id": "lt356",
+    "prompt": "What is the population of Vietnam?"
+  },
+  {
+    "id": "lt357",
+    "prompt": "Translate the word 'river' into German."
+  },
+  {
+    "id": "lt358",
+    "prompt": "Extract the order number and shipping date from this text: Flight UA2291 departs at 6:45am from gate B12."
+  },
+  {
+    "id": "lt359",
+    "prompt": "What is the chemical symbol for iron?"
+  },
+  {
+    "id": "lt360",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"The export button on the dashboard doesn't do anything.\""
+  },
+  {
+    "id": "lt361",
+    "prompt": "Given this data, identify the trend: Monthly signups grew from 200 to 1,800 over the past six months, with the sharpest increase after the referral program launched."
+  },
+  {
+    "id": "lt362",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"The hotel room was spacious and clean, but the Wi-Fi kept dropping every hour.\""
+  },
+  {
+    "id": "lt363",
+    "prompt": "Summarize the key differences between unit tests and integration tests in a short paragraph."
+  },
+  {
+    "id": "lt364",
+    "prompt": "Give a one-sentence example of garbage collection."
+  },
+  {
+    "id": "lt365",
+    "prompt": "A school principal is trying to decide between adopting a strict zero-tolerance discipline policy and using a restorative justice approach. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt366",
+    "prompt": "Convert 40 EUR to USD (approximate)."
+  },
+  {
+    "id": "lt367",
+    "prompt": "Summarize the key differences between a monolith architecture and a microservices architecture in a short paragraph."
+  },
+  {
+    "id": "lt368",
+    "prompt": "What is the capital of Egypt?"
+  },
+  {
+    "id": "lt369",
+    "prompt": "Give a one-sentence example of cache."
+  },
+  {
+    "id": "lt370",
+    "prompt": "Convert 150 USD to MXN (approximate)."
+  },
+  {
+    "id": "lt371",
+    "prompt": "What is the two-letter abbreviation for Ohio?"
+  },
+  {
+    "id": "lt372",
+    "prompt": "Who is most associated with the fall of the Berlin Wall?"
+  },
+  {
+    "id": "lt373",
+    "prompt": "Compare the trade-offs between microservices and a monolithic architecture for a fast-growing startup's backend. Analyze team velocity, operational overhead, and deployment complexity step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt374",
+    "prompt": "Write a short creative story about a small town where the streetlights start switching on in a new pattern every night, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt375",
+    "prompt": "What is the capital of Vermont?"
+  },
+  {
+    "id": "lt376",
+    "prompt": "What is 100 minus 37?"
+  },
+  {
+    "id": "lt377",
+    "prompt": "A city planner is trying to decide between approving a new highway expansion and investing the same budget in public transit. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt378",
+    "prompt": "What is 12 cubed?"
+  },
+  {
+    "id": "lt379",
+    "prompt": "Convert 10 miles to kilometers."
+  },
+  {
+    "id": "lt380",
+    "prompt": "Convert 30 EUR to GBP (approximate)."
+  },
+  {
+    "id": "lt381",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"I'd like to update the billing address on my account.\""
+  },
+  {
+    "id": "lt382",
+    "prompt": "What is the main takeaway of this passage in one sentence: A regional grocery chain began piloting reusable produce bags at checkout, reporting a modest drop in single-use plastic bag purchases within the first month, though customer feedback was mixed."
+  },
+  {
+    "id": "lt383",
+    "prompt": "What is 17 + 26?"
+  },
+  {
+    "id": "lt384",
+    "prompt": "Given this data, identify the trend: Weekly bug reports: 40, 35, 38, 22, 20, 15"
+  },
+  {
+    "id": "lt385",
+    "prompt": "Write a persuasive essay arguing that cities should ban private cars from downtown cores, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt386",
+    "prompt": "Define the term 'middleware' in one sentence."
+  },
+  {
+    "id": "lt387",
+    "prompt": "Classify this email as spam or legitimate: \"Please find attached the invoice for last month's consulting work.\""
+  },
+  {
+    "id": "lt388",
+    "prompt": "What currency is used in Kenya?"
+  },
+  {
+    "id": "lt389",
+    "prompt": "What is the two-letter abbreviation for Montana?"
+  },
+  {
+    "id": "lt390",
+    "prompt": "Write a persuasive essay arguing that cities should prioritize bike infrastructure over new parking capacity, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt391",
+    "prompt": "Extract the flight number and departure time from this text: Order #A4821 will ship on March 3rd."
+  },
+  {
+    "id": "lt392",
+    "prompt": "Extract the product name and quantity from this text: Please send 12 units of the standing desk model."
+  },
+  {
+    "id": "lt393",
+    "prompt": "Extract the order number from this text: Your order #48213 was placed on 2026-03-11 and will ship within 3 days."
+  },
+  {
+    "id": "lt394",
+    "prompt": "Outline the main steps involved in setting up a small business LLC."
+  },
+  {
+    "id": "lt395",
+    "prompt": "What is the two-letter abbreviation for Colorado?"
+  },
+  {
+    "id": "lt396",
+    "prompt": "List the pros and cons of offering unlimited PTO instead of an accrued-days policy."
+  },
+  {
+    "id": "lt397",
+    "prompt": "Write a persuasive essay arguing that schools should teach personal finance as a required course, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt398",
+    "prompt": "Explain 'recursion' the way you would to a beginner, in one sentence."
+  },
+  {
+    "id": "lt399",
+    "prompt": "What currency is used in Canada?"
+  },
+  {
+    "id": "lt400",
+    "prompt": "What is the capital of Oregon?"
+  },
+  {
+    "id": "lt401",
+    "prompt": "What day of the week did January 1, 2000 fall on?"
+  },
+  {
+    "id": "lt402",
+    "prompt": "Summarize the following article in two sentences:\n\nContext: A regional airline announced it will add three new routes next spring, connecting two mid-sized cities that have not had direct flights in over a decade. Local business groups welcomed the news, saying the lack of air service has been a recurring complaint from companies considering relocating to the area, though some analysts questioned whether demand would be strong enough to sustain the routes past the first year."
+  },
+  {
+    "id": "lt403",
+    "prompt": "What is the capital of Nevada?"
+  },
+  {
+    "id": "lt404",
+    "prompt": "What is Wisconsin best known for?"
+  },
+  {
+    "id": "lt405",
+    "prompt": "Summarize the following in two sentences:\n\nA city's public library system expanded its hours on weekends after survey data showed strong demand from working families, funded by a reallocation of the parks department budget."
+  },
+  {
+    "id": "lt406",
+    "prompt": "What is 144 divided by 12?"
+  },
+  {
+    "id": "lt407",
+    "prompt": "What is the boiling point of ethanol in Celsius?"
+  },
+  {
+    "id": "lt408",
+    "prompt": "Summarize the key differences between gas stoves and induction stoves in a short paragraph."
+  },
+  {
+    "id": "lt409",
+    "prompt": "Extract the customer name and total amount from this text: Total for customer Maria Lopez comes to $482.10."
+  },
+  {
+    "id": "lt410",
+    "prompt": "Convert 60 AUD to USD (approximate)."
+  },
+  {
+    "id": "lt411",
+    "prompt": "Classify this email as spam or legitimate: \"Subject: Congratulations, you've been selected for a free gift card!\""
+  },
+  {
+    "id": "lt412",
+    "prompt": "Summarize the following in two sentences:\n\nA new study found that hybrid work schedules led to a 12% increase in self-reported employee satisfaction, though managers noted a slight drop in cross-team collaboration during the first two quarters."
+  },
+  {
+    "id": "lt413",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Fast shipping and the product matched the description exactly.\""
+  },
+  {
+    "id": "lt414",
+    "prompt": "Extract the email address from this text: Contact Jane Doe at jane.doe@example.com or 555-123-4567 for support."
+  },
+  {
+    "id": "lt415",
+    "prompt": "What year did the first Olympics happen?"
+  },
+  {
+    "id": "lt416",
+    "prompt": "What is Oregon best known for?"
+  },
+  {
+    "id": "lt417",
+    "prompt": "Summarize the key differences between REST APIs and GraphQL APIs in a short paragraph."
+  },
+  {
+    "id": "lt418",
+    "prompt": "What is the two-letter abbreviation for Arizona?"
+  },
+  {
+    "id": "lt419",
+    "prompt": "Translate the word 'garden' into Spanish."
+  },
+  {
+    "id": "lt420",
+    "prompt": "Extract the customer name and total amount from this text: Please send 12 units of the standing desk model."
+  },
+  {
+    "id": "lt421",
+    "prompt": "Summarize the key differences between a standing desk and a traditional desk in a short paragraph."
+  },
+  {
+    "id": "lt422",
+    "prompt": "What is Alabama best known for?"
+  },
+  {
+    "id": "lt423",
+    "prompt": "Define the term 'interpreter' in one sentence."
+  },
+  {
+    "id": "lt424",
+    "prompt": "What is the two-letter abbreviation for Nevada?"
+  },
+  {
+    "id": "lt425",
+    "prompt": "Translate the word 'river' into Spanish."
+  },
+  {
+    "id": "lt426",
+    "prompt": "Give a one-sentence example of variable."
+  },
+  {
+    "id": "lt427",
+    "prompt": "Compare the trade-offs between a single large model and an ensemble of smaller models for a production ML pipeline. Analyze latency, accuracy, and maintenance burden step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt428",
+    "prompt": "What is Delaware best known for?"
+  },
+  {
+    "id": "lt429",
+    "prompt": "Translate the word 'ocean' into French."
+  },
+  {
+    "id": "lt430",
+    "prompt": "What is the hex code for the color slate gray?"
+  },
+  {
+    "id": "lt431",
+    "prompt": "What is Idaho best known for?"
+  },
+  {
+    "id": "lt432",
+    "prompt": "What is the capital of Poland?"
+  },
+  {
+    "id": "lt433",
+    "prompt": "Design a real-time chat application for supporting millions of concurrent users, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt434",
+    "prompt": "Design a fraud detection system for a payments platform processing millions of transactions per day, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt435",
+    "prompt": "Define the term 'hash map' in one sentence."
+  },
+  {
+    "id": "lt436",
+    "prompt": "List the pros and cons of moving customer support fully to chat instead of phone."
+  },
+  {
+    "id": "lt437",
+    "prompt": "What is the square root of 81?"
+  },
+  {
+    "id": "lt438",
+    "prompt": "What language is primarily spoken in Egypt?"
+  },
+  {
+    "id": "lt439",
+    "prompt": "Given this data, identify the trend: Average response time rose from 2 hours to 14 hours over the last quarter as ticket volume tripled."
+  },
+  {
+    "id": "lt440",
+    "prompt": "Give a one-sentence example of interpreter."
+  },
+  {
+    "id": "lt441",
+    "prompt": "What is the main takeaway of this passage in one sentence: A youth sports league reported record enrollment this spring, crediting a new scholarship fund that covers registration fees for low-income families in the district."
+  },
+  {
+    "id": "lt442",
+    "prompt": "What is the two-letter abbreviation for Delaware?"
+  },
+  {
+    "id": "lt443",
+    "prompt": "What is the population of Norway?"
+  },
+  {
+    "id": "lt444",
+    "prompt": "What is Wyoming best known for?"
+  },
+  {
+    "id": "lt445",
+    "prompt": "Classify this email as spam or legitimate: \"Reminder: your dentist appointment is scheduled for next Tuesday at 3pm.\""
+  },
+  {
+    "id": "lt446",
+    "prompt": "What is Utah best known for?"
+  },
+  {
+    "id": "lt447",
+    "prompt": "Translate the word 'house' into German."
+  },
+  {
+    "id": "lt448",
+    "prompt": "Why do supply chain disruptions typically cause short-term price spikes? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of over-correcting inventory afterward."
+  },
+  {
+    "id": "lt449",
+    "prompt": "Translate the word 'mountain' into Spanish."
+  },
+  {
+    "id": "lt450",
+    "prompt": "Write a short creative story about a translator who starts hearing a dead language whispered in dreams, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt451",
+    "prompt": "List the pros and cons of using a monorepo for a multi-service codebase."
+  },
+  {
+    "id": "lt452",
+    "prompt": "What is the capital of Delaware?"
+  },
+  {
+    "id": "lt453",
+    "prompt": "Write a short creative story about an astronaut who receives a radio signal from a version of Earth that made different choices, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt454",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Terrible experience, waited an hour and the order was still wrong.\""
+  },
+  {
+    "id": "lt455",
+    "prompt": "Compare the trade-offs between vertical scaling and horizontal scaling for a database approaching its write capacity limit. Analyze cost, downtime risk, and long-term headroom step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt456",
+    "prompt": "What is the chemical symbol for gold?"
+  },
+  {
+    "id": "lt457",
+    "prompt": "What is 9 squared?"
+  },
+  {
+    "id": "lt458",
+    "prompt": "What is 8 times 13?"
+  },
+  {
+    "id": "lt459",
+    "prompt": "Why do trade tariffs typically protect domestic industries? Give a nuanced, step by step explanation of the mechanisms involved, and discuss the risks of provoking retaliatory tariffs that hurt exporters."
+  },
+  {
+    "id": "lt460",
+    "prompt": "A nonprofit director is trying to decide between accepting a large donation with restrictive strings attached and declining it and relying on smaller unrestricted gifts. Analyze the ethical and practical implications of each and recommend a course of action, explaining your reasoning."
+  },
+  {
+    "id": "lt461",
+    "prompt": "Define the term 'algorithm' in one sentence."
+  },
+  {
+    "id": "lt462",
+    "prompt": "Give a one-sentence example of algorithm."
+  },
+  {
+    "id": "lt463",
+    "prompt": "Identify the main topic of this paragraph in one sentence: A regional airline announced it will add three new routes next spring, connecting two mid-sized cities that have not had direct flights in over a decade. Local business groups welcomed the news, saying the lack of air service has been a recurring complaint from companies considering relocating to the area, though some analysts questioned whether demand would be strong enough to sustain the routes past the first year."
+  },
+  {
+    "id": "lt464",
+    "prompt": "Given this data, identify the trend: Support ticket volume spikes every Monday morning and drops steadily through the rest of the week."
+  },
+  {
+    "id": "lt465",
+    "prompt": "What is the capital of Wyoming?"
+  },
+  {
+    "id": "lt466",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Fast shipping and great packaging, though the color was slightly different from the photos.\""
+  },
+  {
+    "id": "lt467",
+    "prompt": "What is the population of Kenya?"
+  },
+  {
+    "id": "lt468",
+    "prompt": "Write a persuasive essay arguing that space exploration funding should be redirected to climate research, addressing likely counterarguments and using at least three distinct supporting points."
+  },
+  {
+    "id": "lt469",
+    "prompt": "What is the two-letter abbreviation for Kansas?"
+  },
+  {
+    "id": "lt470",
+    "prompt": "Write a short creative story about a chess player who realizes their opponent is playing moves from a game that hasn't happened yet, and explain why the ending you chose is meaningful."
+  },
+  {
+    "id": "lt471",
+    "prompt": "What year did the fall of the Berlin Wall happen?"
+  },
+  {
+    "id": "lt472",
+    "prompt": "What language is primarily spoken in Norway?"
+  },
+  {
+    "id": "lt473",
+    "prompt": "List the pros and cons of self-driving cars."
+  },
+  {
+    "id": "lt474",
+    "prompt": "What is the atomic number of iron?"
+  },
+  {
+    "id": "lt475",
+    "prompt": "What is the capital of Japan?"
+  },
+  {
+    "id": "lt476",
+    "prompt": "Extract the date from this text: Reach the office at info@acme.co or call 555-987-6543 between 9 and 5."
+  },
+  {
+    "id": "lt477",
+    "prompt": "What is the atomic number of gold?"
+  },
+  {
+    "id": "lt478",
+    "prompt": "What region of the US is Maine typically considered part of?"
+  },
+  {
+    "id": "lt479",
+    "prompt": "Compare the trade-offs between Kubernetes and a managed PaaS for deploying a small startup's backend. Analyze operational overhead, cost at low scale, and flexibility step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt480",
+    "prompt": "What is the atomic number of oxygen?"
+  },
+  {
+    "id": "lt481",
+    "prompt": "What is 15% of 200?"
+  },
+  {
+    "id": "lt482",
+    "prompt": "What language is primarily spoken in Poland?"
+  },
+  {
+    "id": "lt483",
+    "prompt": "What is the population of Japan?"
+  },
+  {
+    "id": "lt484",
+    "prompt": "What is the two-letter abbreviation for Utah?"
+  },
+  {
+    "id": "lt485",
+    "prompt": "What is the main takeaway of this passage in one sentence: A manufacturing plant switched to a predictive maintenance system, cutting unplanned downtime by nearly a fifth in its first two quarters of operation."
+  },
+  {
+    "id": "lt486",
+    "prompt": "Categorize this support ticket into billing, technical, or account: \"I was charged twice for my subscription this month.\""
+  },
+  {
+    "id": "lt487",
+    "prompt": "Classify the sentiment of this review as positive, negative, or neutral: \"Great value for the price, portions were generous and tasty.\""
+  },
+  {
+    "id": "lt488",
+    "prompt": "Define the term 'closure' in one sentence."
+  },
+  {
+    "id": "lt489",
+    "prompt": "Compare the trade-offs between renting and buying for a young professional's first home decision. Analyze long-term cost, flexibility, and financial risk step by step, then give a final recommendation. Output as JSON with fields: options, tradeoffs, recommendation."
+  },
+  {
+    "id": "lt490",
+    "prompt": "Given this data, identify the trend: Server error rates climbed steadily over two weeks before spiking sharply after Friday's deployment."
+  },
+  {
+    "id": "lt491",
+    "prompt": "Design a job queue for a service processing user-uploaded video transcoding requests, analyzing scalability, cost, and reliability trade-offs, and justify your final design choice."
+  },
+  {
+    "id": "lt492",
+    "prompt": "List the pros and cons of a four-day work week."
+  }
+]
