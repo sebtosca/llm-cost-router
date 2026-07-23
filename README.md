@@ -34,18 +34,48 @@ real volume, that gap is pure waste.
    tier, and (once verification finishes) a quality score — the audit trail
    behind the cost dashboard below.
 
+## Architecture
+
 ```mermaid
-flowchart LR
-    client([Client]) --> api[FastAPI /v1/completions]
-    api --> classifier[Classifier\nheuristic or sklearn]
-    classifier --> router[Router\nconfig/routing.yaml]
-    router --> providers[(OpenAI / Anthropic / Gemini)]
-    providers --> api --> client
-    api -. background task .-> verifier[Async Verifier]
-    verifier --> judge[Judge model\nclaude-sonnet-5]
-    verifier --> db[(SQLite\nrequest_log)]
-    db --> dashboard[Streamlit dashboard]
+flowchart TB
+    client([Client / curl])
+
+    subgraph container ["Docker container: API service"]
+        api["FastAPI\nPOST /v1/completions"]
+        classifier["Classifier\nheuristic or sklearn"]
+        router["Router\nconfig/routing.yaml"]
+        verifier["Async Verifier\nFastAPI BackgroundTasks"]
+        api --> classifier --> router
+        api -. "after response is returned" .-> verifier
+    end
+
+    subgraph providers ["External LLM providers"]
+        openai[("OpenAI\ngpt-4o / gpt-4o-mini")]
+        anthropic[("Anthropic\nclaude-sonnet-5 / claude-haiku-4-5")]
+        gemini[("Gemini\ngemini-3-flash")]
+    end
+
+    subgraph volume ["Bind-mounted volume"]
+        db[("SQLite\nrouter.db")]
+    end
+
+    subgraph local ["Local process (streamlit run)"]
+        dashboard["Streamlit dashboard"]
+    end
+
+    client -- "prompt" --> api
+    router -- "routed request" --> providers
+    providers -- "response" --> api
+    api -- "response + model_used, tier, reason" --> client
+    api -- "log_request()" --> db
+    verifier -- "reference answer + judge score" --> anthropic
+    verifier -- "quality_score, escalated" --> db
+    dashboard -- "reads" --> db
 ```
+
+`config/` is bind-mounted alongside `data/`, so `routing.yaml` can be edited
+on the host and picked up without a rebuild. The dashboard is a separate
+process — it reads `router.db` directly rather than calling the API.
 
 ## Results
 
