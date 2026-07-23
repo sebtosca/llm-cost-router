@@ -1,9 +1,112 @@
-# llm-cost-router
+# LLM Cost Router
 
-Routes LLM completion requests to the cheapest model capable of handling them.
-A classifier scores each prompt into a complexity tier (1=simple, 2=moderate,
-3=complex), and a YAML-configured router maps each tier to a model across
-OpenAI, Anthropic, and Gemini.
+A routing layer that sits in front of multiple LLM providers, scores each
+incoming prompt's complexity, and sends it to the cheapest model that can
+actually handle it — instead of defaulting every request to a top-tier model
+"just in case."
+
+## The problem
+
+Most teams calling LLMs in production route every request to one model,
+usually whichever one is good enough for their hardest prompts. That means a
+six-word factual question ("What is the capital of France?") gets billed at
+the same per-token rate as a multi-step reasoning task, even though the
+cheapest model in this project's registry is **~20x cheaper per input token
+and ~25x cheaper per output token** than the most expensive one. At any
+real volume, that gap is pure waste.
+
+## How it works
+
+1. **Classify.** Every prompt is scored into a complexity tier — Tier 1
+   (simple Q&A/extraction/reformatting), Tier 2 (summarization/
+   classification), or Tier 3 (multi-step reasoning, creative generation,
+   nuanced judgment) — by a hand-tunable heuristic classifier, or optionally
+   a scikit-learn model trained on 200+ labeled examples.
+2. **Route.** A YAML config (`config/routing.yaml`, hot-swappable via
+   `PUT /v1/routing-config`) maps each tier to a real model across OpenAI,
+   Anthropic, and Gemini.
+3. **Verify, asynchronously.** After the cheap response is already back with
+   the caller, a background job independently re-answers the same prompt
+   with the highest-tier "judge" model and scores agreement. A bad score
+   marks the request `escalated` and becomes a new training example — the
+   feedback loop that lets the classifier improve over time.
+4. **Log everything.** Every request lands in SQLite with cost, latency,
+   tier, and (once verification finishes) a quality score — the audit trail
+   behind the cost dashboard below.
+
+## Architecture
+
+```mermaid
+flowchart TB
+    client([Client / curl])
+
+    subgraph container ["Docker container: API service"]
+        api["FastAPI\nPOST /v1/completions"]
+        classifier["Classifier\nheuristic or sklearn"]
+        router["Router\nconfig/routing.yaml"]
+        verifier["Async Verifier\nFastAPI BackgroundTasks"]
+        api --> classifier --> router
+        api -. "after response is returned" .-> verifier
+    end
+
+    subgraph providers ["External LLM providers"]
+        openai[("OpenAI\ngpt-4o / gpt-4o-mini")]
+        anthropic[("Anthropic\nclaude-sonnet-5 / claude-haiku-4-5")]
+        gemini[("Gemini\ngemini-3-flash")]
+    end
+
+    subgraph volume ["Bind-mounted volume"]
+        db[("SQLite\nrouter.db")]
+    end
+
+    subgraph local ["Local process (streamlit run)"]
+        dashboard["Streamlit dashboard"]
+    end
+
+    client -- "prompt" --> api
+    router -- "routed request" --> providers
+    providers -- "response" --> api
+    api -- "response + model_used, tier, reason" --> client
+    api -- "log_request()" --> db
+    verifier -- "reference answer + judge score" --> anthropic
+    verifier -- "quality_score, escalated" --> db
+    dashboard -- "reads" --> db
+```
+
+`config/` is bind-mounted alongside `data/`, so `routing.yaml` can be edited
+on the host and picked up without a rebuild. The dashboard is a separate
+process — it reads `router.db` directly rather than calling the API.
+
+## Results
+
+From a 492-prompt load test sent through the live, running API (real,
+diverse prompts spanning all three tiers — see
+[Load test](#load-test) below):
+
+| Metric | Value |
+|---|---|
+| Requests completed | 390 |
+| Actual cost | $1.0698 |
+| Cost if every request had used the priciest model instead | $1.6152 |
+| **Savings** | **$0.5454 (33.8%)** |
+
+That blended number undersells what routing does on a per-request basis, and
+it's worth explaining why: **89% of requests (348/390) were routed to the
+cheapest model at an average of $0.00007/request, while the 11% that
+genuinely needed the top-tier model averaged $0.025/request — 377x more.**
+Cost in LLM workloads is concentrated in a small tail of hard prompts, not
+spread evenly across traffic. The 33.8% blended figure reflects that: it's
+the real number, not a cherry-picked one, and it's exactly the kind of
+result you'd expect once the "easy" 89% of a workload stops subsidizing
+top-tier pricing for everyone.
+
+*(Methodology note: 112 of the 492 load-test prompts were correctly
+classified as Tier 2 but failed at the provider level — the Gemini key used
+for `tier_2` has no funding in this run — so they're excluded from both the
+actual and baseline totals rather than counted as either a cost or a
+savings. See [Known limitations](#known-limitations).)*
+
+![Cost dashboard headline metrics](docs/dashboard-headline.png)
 
 ## Setup
 
@@ -72,6 +175,18 @@ Reads directly from `data/router.db`: headline cost-savings metrics, cost
 per day vs. an all-priciest-model baseline, escalation rate over time,
 routing distribution by model, and quality score distribution.
 
+| Routing distribution (cost by model) | Quality score distribution |
+|---|---|
+| ![Routing distribution pie chart](docs/dashboard-routing.png) | ![Quality score histogram](docs/dashboard-quality.png) |
+
+The pie chart shows 97.9% of spend still went to the priciest model
+(`claude-sonnet-5`, tier 3) against 2.15% for `gpt-4o-mini` (tier 1) — the
+concentrated-tail effect described in [Results](#results): tier 3 gets a
+small share of *requests* but dominates *cost*. The quality histogram shows
+the async verifier's agreement scores for cheap-tier responses, mostly
+clustered at 4-5 (candidate agreed with the judge model), which is what
+keeps the escalation rate low.
+
 ## Baseline test script
 
 Sends a fixed prompt set to every registered model and reports cost/latency
@@ -80,6 +195,23 @@ per model. Makes real, paid API calls.
 ```bash
 python scripts/baseline_test.py
 ```
+
+## Load test
+
+Generates ~500 diverse prompts and sends them through the live, running API
+(exercising classification, routing, logging, and async verification end to
+end, not just direct provider calls):
+
+```bash
+python scripts/generate_load_test_prompts.py   # regenerate data/prompts/load_test_prompts.json (optional, already tracked)
+python scripts/load_test.py --concurrency 5     # requires the API already running
+curl localhost:8000/v1/stats                    # final report
+```
+
+Prompt set: 229 prompts reused from the classifier's labeled dataset plus
+~270 new prompts across fresh topic pools, deduplicated (`data/prompts/load_test_prompts.json`).
+Results land in `data/results/load_test_<timestamp>.json`. See
+[Results](#results) above for the numbers from the most recent run.
 
 ## Classifier: heuristic vs. sklearn
 
@@ -134,6 +266,16 @@ as an in-process FastAPI background task, not a real task queue. `.env` is
 optional; the API starts fine without it and only fails at request time if a
 key is missing.
 
-## Not yet built
+## Known limitations
 
-Load testing.
+- **Tier 2 requires a funded Gemini key.** `config/routing.yaml` maps
+  `tier_2` to `gemini-3-flash`; without billing enabled on that key, every
+  Tier 2 request fails at the provider (502) and is excluded from
+  `/v1/stats` rather than counted. Swap `tier_2` to a funded model (e.g.
+  `claude-haiku-4-5`, already registered) to exercise all three tiers.
+- **Verifier cost isn't logged.** The async verifier's two judge-model calls
+  per request (reference answer + agreement score) are real, billed API
+  calls but aren't written to `request_log` or counted in `/v1/stats` — the
+  dashboard's cost figures reflect only the primary completion path.
+- **No local model.** Ollama was evaluated and removed; all three registered
+  providers are paid cloud APIs.
